@@ -19,7 +19,7 @@ header li {
 }
 header a {
   padding: 1rem;
-  transition: all 0.2s;
+  transition: color 0.2s;
 }
 header a:hover {
   color: red;
