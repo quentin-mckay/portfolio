@@ -1,0 +1,23 @@
+// ====== Import Partials ======
+@import 'config';
+
+
+
+// ====== Reset ======
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: $bg-color;
+    color: $text-color;
+    font-family: sans-serif;
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+}
