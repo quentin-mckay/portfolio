@@ -32,7 +32,42 @@ header {
     }
 
     .menu-btn {
-        width: 2rem;
+        
         display: none;
+    }
+}
+
+.open-nav {
+    transform: translateX(0);
+}
+
+// ====== Desktop: screen size greater than 800px wide ======
+@media only screen and (max-width: 800px) {
+    body {
+        background: black;
+    }
+
+    header {
+        .menu-btn {
+            display: block;
+            width: 2rem;
+
+            cursor: pointer;
+        }
+    }
+    
+
+    nav {
+        background: green;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 50%;
+
+        transform: translateX(95%);
+
+        
+
     }
 }
