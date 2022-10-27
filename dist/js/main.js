@@ -6,6 +6,8 @@ const nav = document.querySelector('nav')
 const header = document.querySelector('header')
 const blurLayer = document.querySelector('.blur-layer')
 
+const main = document.querySelector('main')
+
 // window.pageYOffset starts at 0 and increases as you scroll down
 let prevScrollPos = window.pageYOffset
 
@@ -41,7 +43,7 @@ menuButtonBurger.addEventListener('click', () => {
 
 
     // menuButtonX.classList.add('menu-btn-x-show')
-    menuButtonX.style.display = "block"
+    menuButtonX.style.display = "block" // show the X button
 
     // disable scrolling
     document.body.classList.add('disable-scroll')
@@ -53,13 +55,20 @@ menuButtonBurger.addEventListener('click', () => {
 menuButtonX.addEventListener('click', () => {
     console.log('close button clicked')
 
+    
+    closeMenu()
+})
+
+main.addEventListener('click', () => {
+    closeMenu()
+})
+
+function closeMenu() {
     nav.classList.remove('open-nav')
     // menuButtonX.classList.remove('menu-btn-show')
     menuButtonX.style.display = "none"
 
-    // enable scrolling
+    // enambe scrolling
     document.body.classList.remove('disable-scroll')
-
-
     blurLayer.classList.remove('blur')
-})
+}
