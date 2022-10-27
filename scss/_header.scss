@@ -21,6 +21,7 @@ header {
         font-weight: bold;
         font-size: 2rem;
         padding: 0.8rem 1rem;
+        z-index: 3;  // needs to be above blur filter layer
     }
 
     nav {
@@ -58,7 +59,7 @@ header {
 
 .menu-btn-x {
     display: none;
-    width: 2rem;
+    width: 1.8rem;
     cursor: pointer;
 
     position: absolute;
@@ -93,13 +94,13 @@ header {
     body {
         background: slateblue;
 
-        
     }
 
     .menu-btn-burger {
         display: block;
     }
 
+    // mobile nav
     nav {
         background: $mobile-menu-bg;
         position: fixed;
@@ -108,9 +109,8 @@ header {
         width: 50%;
         height: 100vh;
 
+        // move off page to the right
         transform: translateX(100%);
-
-        
 
         ul {
             display: flex;
