@@ -9,6 +9,17 @@ body {
   color: white;
   font-family: sans-serif;
 }
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #1D1D1D;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border: 3px solid #1D1D1D;
+  border-radius: 10px;
+}
 
 a {
   color: white;
@@ -16,7 +27,15 @@ a {
 }
 
 header {
-  background: #333;
+  background: rgba(51, 51, 51, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: transform 0.25s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,6 +45,9 @@ header .logo {
   font-weight: bold;
   font-size: 2rem;
   padding: 0.8rem 1rem;
+}
+header nav {
+  transition: transform 200ms;
 }
 header ul {
   display: flex;
@@ -41,30 +63,68 @@ header a {
 header a:hover {
   color: red;
 }
-header .menu-btn {
+
+.hide-header {
+  transform: translateY(-100%);
+}
+
+.menu-btn-burger {
   display: none;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.menu-btn-x {
+  display: none;
+  width: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  margin: 0.8rem 2.6rem;
 }
 
 .open-nav {
   transform: translateX(0);
 }
 
+.menu-btn-x-show {
+  display: block;
+}
+
+.disable-scroll {
+  overflow-y: hidden;
+}
+
 @media only screen and (max-width: 800px) {
   body {
-    background: black;
+    background: slateblue;
   }
-  header .menu-btn {
+  .menu-btn-burger {
     display: block;
-    width: 2rem;
-    cursor: pointer;
   }
   nav {
-    background: green;
+    background: #555;
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
     width: 50%;
-    transform: translateX(95%);
+    height: 100vh;
+    transform: translateX(100%);
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    margin-top: 5rem;
+  }
+  nav li {
+    padding: 2rem;
+  }
+  nav a {
+    color: orange;
   }
 }/*# sourceMappingURL=main.css.map */

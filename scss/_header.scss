@@ -1,5 +1,15 @@
+
+// ====== Desktop first approach (I know, I know. Should be mobile-first) ======
 header {
-    background: #333;
+    background: rgba(51, 51, 51, $header-opacity);
+    backdrop-filter: blur($header-blur-amount);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.25s;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,6 +21,10 @@ header {
         font-weight: bold;
         font-size: 2rem;
         padding: 0.8rem 1rem;
+    }
+
+    nav {
+        transition: transform 200ms;
     }
 
     ul {
@@ -30,44 +44,93 @@ header {
             color: red;
         }
     }
-
-    .menu-btn {
-        
-        display: none;
-    }
 }
 
+.hide-header {
+    transform: translateY(-100%);
+}
+
+.menu-btn-burger {
+    display: none;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.menu-btn-x {
+    display: none;
+    width: 2rem;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    margin: 0.8rem 2.6rem;
+    // z-index: 2;
+}
+
+
+// ====== State change classes applied via Javascript ======
+
+
+// when .open-nav class is applied on button click
 .open-nav {
     transform: translateX(0);
 }
 
-// ====== Desktop: screen size greater than 800px wide ======
+.menu-btn-x-show {
+    display: block;
+}
+
+
+.disable-scroll {
+    overflow-y: hidden;
+}
+
+
+// ====== Mobile: screen size less than ======
 @media only screen and (max-width: 800px) {
     body {
-        background: black;
+        background: slateblue;
+
+        
     }
 
-    header {
-        .menu-btn {
-            display: block;
-            width: 2rem;
-
-            cursor: pointer;
-        }
+    .menu-btn-burger {
+        display: block;
     }
-    
 
     nav {
-        background: green;
+        background: $mobile-menu-bg;
         position: fixed;
         top: 0;
         right: 0;
-        height: 100vh;
         width: 50%;
+        height: 100vh;
 
-        transform: translateX(95%);
+        transform: translateX(100%);
 
         
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            height: 100%;
+
+            margin-top: 5rem;
+        }
+
+        // padding needs to be on li's, NOT a's
+        li {
+            padding: 2rem;
+        }
+
+        a {
+            color: orange;
+        }
+
 
     }
 }

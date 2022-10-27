@@ -15,11 +15,29 @@ body {
     background: $bg-color;
     color: $text-color;
     font-family: sans-serif;
+
+    // ====== scrollbar styles ======
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $bg-color;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border: 3px solid $bg-color;
+        border-radius: 10px;
+    }
 }
 
 a {
     color: $text-color;
     text-decoration: none;
 }
+
+
+
 
 @import 'header';
