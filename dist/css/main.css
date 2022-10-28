@@ -70,7 +70,7 @@ header a:hover {
   overflow-y: hidden;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   body {
     background: slateblue;
   }
@@ -101,6 +101,11 @@ header a:hover {
     color: orange;
   }
 }
+.home {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .hero {
   height: 100vh;
   background: darkslateblue;
@@ -151,4 +156,62 @@ a {
 .blur {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
+}
+
+.icons {
+  position: fixed;
+  left: 40px;
+  bottom: 0;
+  width: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icons path {
+  fill: white;
+}
+.icons a {
+  display: inline-block;
+  padding: 12px;
+}
+.icons svg {
+  transform: scale(1.2);
+  transition: all 0.25s;
+}
+.icons svg:hover {
+  transform: scale(1.7);
+}
+.icons::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  background: white;
+  margin-top: 10px;
+}
+
+.email-right {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  z-index: 10;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  display: flex;
+  align-items: center;
+}
+.email-right::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  background: white;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .icons, .email-right {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -38,37 +38,27 @@ window.addEventListener('scroll', () => {
 menuButtonBurger.addEventListener('click', () => {
     console.log('open button clicked');
 
-    // add class which transform: translate(0) which shows mobile menu
-    nav.classList.add('open-nav')
+    nav.classList.add('open-nav') // adds class which transform: translate(0) to show mobile menu
 
-
-    // menuButtonX.classList.add('menu-btn-x-show')
     menuButtonX.style.display = "block" // show the X button
 
-    // disable scrolling
-    document.body.classList.add('disable-scroll')
+    document.body.classList.add('disable-scroll') // disable scrolling
 
-    blurLayer.classList.add('blur')
+    blurLayer.classList.add('blur') // add blur effect
 })
 
 // on mobile menu close
 menuButtonX.addEventListener('click', () => {
     console.log('close button clicked')
-
     
     closeMenu()
 })
 
-main.addEventListener('click', () => {
-    closeMenu()
-})
+main.addEventListener('click', closeMenu)
 
 function closeMenu() {
     nav.classList.remove('open-nav')
-    // menuButtonX.classList.remove('menu-btn-show')
     menuButtonX.style.display = "none"
-
-    // enambe scrolling
-    document.body.classList.remove('disable-scroll')
-    blurLayer.classList.remove('blur')
+    document.body.classList.remove('disable-scroll') // enable scrolling
+    blurLayer.classList.remove('blur') // remove blur
 }

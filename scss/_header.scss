@@ -90,7 +90,7 @@ header {
 
 
 // ====== Mobile: screen size less than ======
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: $mobile-width) {
     body {
         background: slateblue;
 
