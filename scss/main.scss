@@ -104,9 +104,23 @@ a {
     z-index: 10;
 
     writing-mode: vertical-lr;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
 
     display: flex;
     align-items: center;
+
+    
+
+    a {
+        transition: all 0.25s;
+
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+
+    
 
     &::after {
         content: "";
@@ -114,7 +128,7 @@ a {
         width: 1px;
         height: 90px;
         background: white;
-        margin-top: 20px;
+        margin-top: 24px;
     }
 }
 

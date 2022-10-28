@@ -198,8 +198,16 @@ a {
   z-index: 10;
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
   display: flex;
   align-items: center;
+}
+.email-right a {
+  transition: all 0.25s;
+}
+.email-right a:hover {
+  transform: scale(1.08);
 }
 .email-right::after {
   content: "";
@@ -207,7 +215,7 @@ a {
   width: 1px;
   height: 90px;
   background: white;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 @media only screen and (max-width: 768px) {
