@@ -3,6 +3,7 @@
 @import url(/dist/font/stylesheet.css);
 @import 'header';
 @import 'home';
+@import 'project';
 
 // ====== availabe fonts ======
 // neurial_groteskregular
@@ -21,10 +22,10 @@
 // site wide styles
 body {
     background: $bg-color;
-    color: $text-color;
+    color: $light-text-color;
     // font-family: sans-serif;
     font-family: 'neurial_groteskregular';
-    font-size: 1;
+    font-size: 1.1rem;
     line-height: 1.3;
 
     // ====== scrollbar styles ======

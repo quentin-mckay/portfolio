@@ -1,14 +1,92 @@
 .home {
     width: 80%;
     margin: 0 auto;
-}
 
-.hero {
-    height: 100vh;
-    background: darkslateblue;
+
+    .hero {
+        height: 100vh;
+        background: darkslateblue;
+        
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2 {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+
+        
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: $medium-text-color;
+            margin-left: 20px;
+
+            // to make line take up all the remaining space
+            flex-grow: 1; 
+        }
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        color: $light-text-color;
+    }
     
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // ====== Featured Project Section ======
+    .featured-projects {
+        // background: midnightblue;
+        
+    }
+
+    .featured-project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // gap: 10px;
+    }
+
+    .side-image-wrapper {
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .side-project-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+
+        color: $medium-text-color;
+        text-align: right;
+    }
+
+    .github-link path {
+        fill: white;
+    }
+
+    .demo-link {
+        // hacky as hell but I don't know how to style SVG's yet
+        transform: scale(0.6);
+        margin-top: -5px;
+    }
+
+    .icon-links {
+        display: flex;
+        align-items: center;
+    }
+
+    svg {
+        width: 40px;
+    }
 }
+
+
+
