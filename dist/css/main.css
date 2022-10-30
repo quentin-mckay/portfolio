@@ -117,6 +117,7 @@ header a:hover {
   padding: 1rem 0;
   display: flex;
   align-items: center;
+  margin: 2rem 0;
 }
 .home h2::after {
   content: "";
@@ -130,9 +131,13 @@ header a:hover {
   font-size: 1.6rem;
   color: #ddd;
 }
+.home .featured-projects {
+  background: midnightblue;
+}
 .home .featured-project {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 4rem;
 }
 .home img {
   width: 100%;
@@ -145,6 +150,22 @@ header a:hover {
   align-items: flex-end;
   color: #888;
   text-align: right;
+}
+.home .side-project-info-flipped {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: #888;
+  text-align: left;
+}
+.home .tech-list {
+  font-family: "Fire Code", monospace;
+  font-size: 0.9rem;
+}
+.home .tech {
+  display: inline-block;
+  padding: 0 10px;
 }
 .home .github-link path {
   fill: white;
