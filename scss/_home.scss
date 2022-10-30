@@ -42,7 +42,7 @@
 
     // ====== Featured Project Section ======
     .featured-projects {
-        background: midnightblue;
+        // background: midnightblue;
         
     }
 
@@ -55,7 +55,7 @@
 
     img {
         width: 100%;
-        border-radius: 10px;
+        border-radius: $border-radius;
     }
 
     .side-project-info {
@@ -74,10 +74,19 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: flex-start; // move stuff to right side
+        align-items: flex-start; // move stuff to left side
 
         color: $medium-text-color;
         text-align: left;
+    }
+
+    .project-details {
+        background: #222;
+        border-radius: $border-radius;
+        padding: 20px;
+
+        width: 110%;
+        z-index: 1; // place it on top of project image
     }
 
     .tech-list {

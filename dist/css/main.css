@@ -123,16 +123,13 @@ header a:hover {
   content: "";
   display: block;
   height: 1px;
-  background: #888;
+  background: #999;
   margin-left: 20px;
   flex-grow: 1;
 }
 .home h3 {
   font-size: 1.6rem;
   color: #ddd;
-}
-.home .featured-projects {
-  background: midnightblue;
 }
 .home .featured-project {
   display: grid;
@@ -141,14 +138,14 @@ header a:hover {
 }
 .home img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .home .side-project-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
-  color: #888;
+  color: #999;
   text-align: right;
 }
 .home .side-project-info-flipped {
@@ -156,8 +153,15 @@ header a:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  color: #888;
+  color: #999;
   text-align: left;
+}
+.home .project-details {
+  background: #222;
+  border-radius: 8px;
+  padding: 20px;
+  width: 110%;
+  z-index: 1;
 }
 .home .tech-list {
   font-family: "Fire Code", monospace;
@@ -195,7 +199,7 @@ header a:hover {
 }
 .project .subtitle {
   margin-top: 0.8rem;
-  color: #888;
+  color: #999;
 }
 .project .primary-img {
   width: 100%;
@@ -208,7 +212,7 @@ header a:hover {
 }
 .project .about-text {
   margin-top: 0.8rem;
-  color: #888;
+  color: #999;
 }
 .project .tech-container {
   margin-top: 1rem;
