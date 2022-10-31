@@ -1,0 +1,28 @@
+.blog-single {
+    margin: $page-margin-top-bottom auto;
+    width: $inner-wrapper-width;
+
+    .main-picture {
+        height: 40vh;
+        background: 
+            linear-gradient(rgba(0,0,0,0), rgba($bg-color,1) ),
+        url('../images/wireframe2.jpg') center/cover; // shorthand for background-position
+    }
+
+    .content-wrapper {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        padding: 0 2rem;
+        text-align: center;
+
+        // pulling the h1 up overlapping the image looks pretty cool
+        // transform: translateY(-10%); 
+    }
+
+    p {
+        margin-top: 2rem;
+    }
+}

@@ -285,6 +285,26 @@ header a:hover {
   font-size: 0.9rem;
 }
 
+.blog-single {
+  margin: 5rem auto;
+  width: 80%;
+}
+.blog-single .main-picture {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0), #1d1d1d), url("../images/wireframe2.jpg") center/cover;
+}
+.blog-single .content-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+.blog-single h1 {
+  padding: 0 2rem;
+  text-align: center;
+}
+.blog-single p {
+  margin-top: 2rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

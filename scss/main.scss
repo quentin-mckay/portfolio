@@ -1,10 +1,11 @@
 // ====== Import Partials ======
 @import 'config';
-@import url(/dist/font/stylesheet.css);
+@import url(/dist/font/stylesheet.css); // bring in downloaded
 @import 'header';
 @import 'home';
 @import 'project';
 @import 'blog';
+@import 'blog-single';
 
 // ====== availabe fonts ======
 // neurial_groteskregular
