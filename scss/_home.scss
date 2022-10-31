@@ -1,18 +1,70 @@
+$border-color: $medium-text-color;
+$color-spread: 3px;
+
 .home {
     width: $inner-wrapper-width;
+    max-width: 800px;
     margin: 0 auto;
 
 
     .hero {
         height: 100vh;
-        background: darkslateblue;
-        
+        // border: 1px solid #222;
     
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
+    .hi {
+        font-family: 'Fira Code';
+        color: $green-color;
+        font-size: 1.2rem;
+        padding-left: 4px;
+
+        border-left: 1px solid $border-color;
+        border-top: 1px solid $border-color;
+        align-self: flex-start;
+    }
+
+    .name {
+        font-size: 5rem;
+        align-self: center;
+        position: relative;
+
+        
+
+        &::before {
+            content: "Quentin McKay";
+            position: absolute;
+            top: -$color-spread;
+            left: -$color-spread;
+            color: $green-color;
+            z-index: -1;
+        }
+
+        &::after {
+            content: "Quentin McKay";
+            position: absolute;
+            bottom: -$color-spread;
+            right: -$color-spread;
+            color: $red-color;
+            z-index: -2;
+        }
+    }
+
+    .under-name {
+        color: $red-color;
+        font-family: 'Fira Code';
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        padding-right: 3px;
+
+        align-self: flex-end;
+
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+    }
     // Featured Projects
     h2 {
         padding: 1rem 0;
