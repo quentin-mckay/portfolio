@@ -2,6 +2,9 @@
 $bg-color: #1D1D1D;
 $text-color: white;
 
+
+$inner-wrapper-width: 80%;
+
 // $mono-font: 'Inconsolata', monospace;
 $mono-font: 'Fire Code', monospace;
 
@@ -12,6 +15,10 @@ $header-blur-amount: 10px;
 
 // ====== Home ======
 $border-radius: 8px;
+
+
+// ====== Blog ======
+$card-gradient-dark-opacity: rgba(0,0,0,0.8);
 
 
 // ====== Mobile ======

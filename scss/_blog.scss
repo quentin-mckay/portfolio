@@ -1,0 +1,49 @@
+.blog {
+    width: $inner-wrapper-width;
+    margin: 5rem auto;
+
+    background: slategrey;
+    background: url();
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .card {
+        border: 1px solid #000;
+        height: 400px;
+        padding: 10px;
+        border-radius: $border-radius;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        &-orange {
+            background: 
+                linear-gradient(rgba(0,0,0,0), $card-gradient-dark-opacity),
+                url('../images/orange2.jpg') center;
+        }
+
+        &-wireframing {
+            background: 
+                linear-gradient(rgba(0,0,0,0), $card-gradient-dark-opacity),
+                url('../images/wireframe2.jpg') center left;
+        }
+
+        &-2023 {
+            background: 
+                linear-gradient(rgba(0,0,0,0), $card-gradient-dark-opacity),
+                url('../images/2023.jpg') center;
+        }
+
+        
+    }
+
+    .date {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+}

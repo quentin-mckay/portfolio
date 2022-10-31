@@ -251,6 +251,40 @@ header a:hover {
   fill: #ddd;
 }
 
+.blog {
+  width: 80%;
+  margin: 5rem auto;
+  background: slategrey;
+  background: url();
+}
+.blog .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+.blog .card {
+  border: 1px solid #000;
+  height: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.blog .card-orange {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../images/orange2.jpg") center;
+}
+.blog .card-wireframing {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../images/wireframe2.jpg") center left;
+}
+.blog .card-2023 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../images/2023.jpg") center;
+}
+.blog .date {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
