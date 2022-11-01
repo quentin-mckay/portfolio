@@ -145,22 +145,6 @@ header li {
   position: relative;
   margin-top: 8px;
 }
-.home .name::before {
-  content: "Quentin McKay";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  color: #08fdd8;
-  z-index: -1;
-}
-.home .name::after {
-  content: "Quentin McKay";
-  position: absolute;
-  bottom: -2px;
-  right: -2px;
-  color: #FD2155;
-  z-index: -2;
-}
 .home .under-name {
   color: #FD2155;
   font-family: "Fira Code";

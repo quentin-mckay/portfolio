@@ -99,7 +99,7 @@ header {
 
 // when .open-nav class is applied on button click
 .open-nav {
-    transform: translateX(-100%);
+    transform: translateX(-100%); // slide in the full width of itself right to left
 }
 
 .menu-btn-x-show {
@@ -133,10 +133,7 @@ header {
         width: 50%;
         height: 100vh;
 
-        // move off page to the right
-        // transform: translateX(100%);
-        // right: -100%;
-        left: 100%;
+        left: 100%; // snap it off to the right side of the page
 
         ul {
             display: flex;

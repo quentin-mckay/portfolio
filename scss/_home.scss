@@ -33,23 +33,23 @@
         margin-top: 8px;
         
 
-        &::before {
-            content: "Quentin McKay";
-            position: absolute;
-            top: -$color-spread;
-            left: -$color-spread;
-            color: $green-color;
-            z-index: -1;
-        }
+        // &::before {
+        //     content: "Quentin McKay";
+        //     position: absolute;
+        //     top: -$color-spread;
+        //     left: -$color-spread;
+        //     color: $green-color;
+        //     z-index: -1;
+        // }
 
-        &::after {
-            content: "Quentin McKay";
-            position: absolute;
-            bottom: -$color-spread;
-            right: -$color-spread;
-            color: $red-color;
-            z-index: -2;
-        }
+        // &::after {
+        //     content: "Quentin McKay";
+        //     position: absolute;
+        //     bottom: -$color-spread;
+        //     right: -$color-spread;
+        //     color: $red-color;
+        //     z-index: -2;
+        // }
     }
 
     .under-name {
