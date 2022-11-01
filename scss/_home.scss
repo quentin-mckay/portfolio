@@ -94,7 +94,6 @@
     // ====== Featured Project Section ======
     .featured-projects {
         // background: midnightblue;
-        
     }
 
     .featured-project {
@@ -170,5 +169,23 @@
     }
 }
 
+// ====== Mobile ======
+@media only screen and (max-width: $mobile-width) {
+    .home {
+        .featured-project {
+            grid-template-columns: 1fr; // stack on top of each other
+        }
 
+        .side-project-info, .side-project-info-flipped {
+            height: 25vh; // spread it out a bit
+        }
+    
+        .side-project-info-flipped {
+            // move the info below the image.
+            // should have left the HTML unflipped and 
+            // just added this to original class above
+            order: 1; 
+        }
+    }
 
+} 

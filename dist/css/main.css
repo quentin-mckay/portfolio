@@ -77,7 +77,7 @@ header li {
 }
 
 .open-nav {
-  transform: translateX(0);
+  transform: translateX(-100%);
 }
 
 .menu-btn-x-show {
@@ -102,7 +102,7 @@ header li {
     right: 0;
     width: 50%;
     height: 100vh;
-    transform: translateX(100%);
+    left: 100%;
   }
   nav ul {
     display: flex;
@@ -244,6 +244,17 @@ header li {
   width: 40px;
 }
 
+@media only screen and (max-width: 768px) {
+  .home .featured-project {
+    grid-template-columns: 1fr;
+  }
+  .home .side-project-info, .home .side-project-info-flipped {
+    height: 25vh;
+  }
+  .home .side-project-info-flipped {
+    order: 1;
+  }
+}
 .project {
   width: 80%;
   max-width: 800px;

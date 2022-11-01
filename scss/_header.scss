@@ -71,7 +71,7 @@ header {
 }
 
 .hide-header {
-    transform: translateY(-100%);
+    transform: translateY(-100%); // move header up above screen
 }
 
 .menu-btn-burger {
@@ -99,7 +99,7 @@ header {
 
 // when .open-nav class is applied on button click
 .open-nav {
-    transform: translateX(0);
+    transform: translateX(-100%);
 }
 
 .menu-btn-x-show {
@@ -110,6 +110,8 @@ header {
     // not sure why this disables scrolling but it works
     overflow-y: hidden;
 }
+
+
 
 
 // ====== Mobile: screen size less than ======
@@ -132,7 +134,9 @@ header {
         height: 100vh;
 
         // move off page to the right
-        transform: translateX(100%);
+        // transform: translateX(100%);
+        // right: -100%;
+        left: 100%;
 
         ul {
             display: flex;
