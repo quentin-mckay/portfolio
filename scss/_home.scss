@@ -1,5 +1,3 @@
-$border-color: $medium-text-color;
-$color-spread: 3px;
 
 .home {
     width: $inner-wrapper-width;
@@ -28,10 +26,11 @@ $color-spread: 3px;
     }
 
     .name {
-        font-size: 5rem;
+        // fluid size scales with window width but stays within 20-80px
+        font-size: clamp(20px, 8vw, 80px);
         align-self: center;
         position: relative;
-
+        margin-top: 8px;
         
 
         &::before {

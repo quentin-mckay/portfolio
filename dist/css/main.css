@@ -5,9 +5,10 @@ header {
           backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
+  height: 4rem;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 100;
   transition: transform 0.25s;
   display: flex;
   justify-content: space-between;
@@ -17,11 +18,34 @@ header {
 header .logo {
   font-weight: bold;
   font-size: 2rem;
-  padding: 0.8rem 1rem;
   z-index: 3;
+  position: relative;
+}
+header .logo::before {
+  content: "/quentin/";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  color: #08fdd8;
+  z-index: -1;
+}
+header .logo::after {
+  content: "/quentin/";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  color: #FD2155;
+  z-index: -2;
 }
 header nav {
   transition: transform 200ms;
+}
+header nav a {
+  padding: 1rem;
+  transition: color 0.2s;
+}
+header nav a:hover {
+  color: #08fdd8;
 }
 header ul {
   display: flex;
@@ -30,13 +54,6 @@ header ul {
 header li {
   list-style: none;
 }
-header a {
-  padding: 1rem;
-  transition: color 0.2s;
-}
-header a:hover {
-  color: red;
-}
 
 .hide-header {
   transform: translateY(-100%);
@@ -44,7 +61,7 @@ header a:hover {
 
 .menu-btn-burger {
   display: none;
-  width: 2rem;
+  width: 2.5rem;
   cursor: pointer;
 }
 
@@ -123,23 +140,24 @@ header a:hover {
   align-self: flex-start;
 }
 .home .name {
-  font-size: 5rem;
+  font-size: clamp(20px, 8vw, 80px);
   align-self: center;
   position: relative;
+  margin-top: 8px;
 }
 .home .name::before {
   content: "Quentin McKay";
   position: absolute;
-  top: -3px;
-  left: -3px;
+  top: -2px;
+  left: -2px;
   color: #08fdd8;
   z-index: -1;
 }
 .home .name::after {
   content: "Quentin McKay";
   position: absolute;
-  bottom: -3px;
-  right: -3px;
+  bottom: -2px;
+  right: -2px;
   color: #FD2155;
   z-index: -2;
 }
@@ -412,6 +430,7 @@ a {
 }
 .icons svg:hover {
   transform: scale(1.7);
+  fill: #08fdd8;
 }
 .icons::after {
   content: "";
@@ -450,7 +469,22 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-  .icons, .email-right {
+  .email-right {
+    display: none;
+  }
+  .icons {
+    background: blue;
+    position: static;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .icons::after {
     display: none;
   }
 }/*# sourceMappingURL=main.css.map */
