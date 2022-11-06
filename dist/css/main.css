@@ -6,6 +6,8 @@ header {
   position: fixed;
   width: 100%;
   height: 4rem;
+  padding: 0 2rem;
+  font-family: "neurial_groteskregular";
   top: 0;
   left: 0;
   z-index: 100;
@@ -13,7 +15,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
 }
 header .logo {
   font-weight: bold;
@@ -141,9 +142,10 @@ header li {
 }
 .home .name {
   font-size: clamp(20px, 8vw, 80px);
+  font-family: Calibre, sans-serif;
   align-self: center;
   position: relative;
-  margin-top: 8px;
+  margin-top: 2.6rem;
 }
 .home .under-name {
   color: #FD2155;
@@ -368,6 +370,7 @@ body {
   background: #1D1D1D;
   color: #ddd;
   font-family: "neurial_groteskregular";
+  font-family: Calibre;
   font-size: 1.1rem;
   line-height: 1.3;
 }

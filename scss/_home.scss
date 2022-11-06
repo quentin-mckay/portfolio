@@ -28,9 +28,13 @@
     .name {
         // fluid size scales with window width but stays within 20-80px
         font-size: clamp(20px, 8vw, 80px);
+
+        font-family: Calibre, sans-serif;
+        // font-weight: light;
+
         align-self: center;
         position: relative;
-        margin-top: 8px;
+        margin-top: 2.6rem;
         
 
         // &::before {
@@ -89,9 +93,15 @@
         font-size: 1.6rem;
         color: $light-text-color;
     }
-    
 
-    // ====== Featured Project Section ======
+    // =====================================
+    // About Section
+    // =====================================
+    
+    
+    // =====================================
+    // Featured Projects Section
+    // =====================================
     .featured-projects {
         // background: midnightblue;
     }

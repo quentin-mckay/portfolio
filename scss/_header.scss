@@ -5,7 +5,13 @@ header {
     backdrop-filter: blur($header-blur-amount);
     position: fixed;
     width: 100%;
+
+    // fixed height, not sure about this. perhaps should let the links' padding do the job
     height: 4rem;
+    
+    padding: 0 2rem;
+
+    font-family: 'neurial_groteskregular';
 
     top: 0;
     left: 0;
@@ -16,7 +22,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 2rem;
+    
 
 
     .logo {
@@ -25,6 +31,7 @@ header {
         // padding: 0.8rem 1rem;
         z-index: 3;  // needs to be above blur filter layer
         position: relative;
+
 
         &::before {
             content: "/quentin/";
