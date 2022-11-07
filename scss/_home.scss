@@ -15,7 +15,7 @@
     }
 
     .hi {
-        font-family: 'Fira Code';
+        font-family: 'Fira Code', monospace;
         color: $green-color;
         font-size: 1.2rem;
         padding-left: 4px;
@@ -30,6 +30,7 @@
         font-size: clamp(20px, 8vw, 80px);
 
         font-family: Calibre, sans-serif;
+        font-weight: 500;
         // font-weight: light;
 
         align-self: center;
@@ -58,7 +59,7 @@
 
     .under-name {
         color: $red-color;
-        font-family: 'Fira Code';
+        font-family: 'Fira Code', monospace;
         font-size: 1.3rem;
         margin-top: 1.5rem;
         padding-right: 3px;
@@ -70,7 +71,7 @@
     }
 
 
-    // Featured Projects
+    // h2's
     .section-heading {
         padding: 1rem 0;
         display: flex;
@@ -101,13 +102,70 @@
     // =====================================
     // About Section
     // =====================================
-    
+    .about {
+        p {
+            color: $medium-text-color;
+            font-size: 1.2rem;
+
+            margin-bottom: 1rem;
+        }
+
+        span {
+            color: $red-color;
+            padding: 2px;
+
+            &.about-name {
+                color: $green-color;
+                padding: 0;
+            }
+
+            &.web-tech {
+                color: $green-color;
+            }
+        }
+
+        &__content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 40px;
+
+            opacity: 0;
+        }
+
+        &__image-wrapper {
+            // background: teal;
+            
+            // quick centering
+            display: grid;
+            place-items: center;
+        }
+
+        img {
+            width: 100%;
+            // clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 20%);
+
+            border-top: 1px solid $green-color;
+            border-left: 1px solid $green-color;
+            border-bottom: 1px solid $red-color;
+            border-right: 1px solid $red-color;
+        }
+
+        .resume {
+            display: inline-block;
+            color: $green-color;
+            // border-bottom: 1px solid $green-color;
+            // padding-left: 5px;
+            padding-bottom: 0;
+            // border-radius: 4px;
+        }
+    }
     
     // =====================================
     // Featured Projects Section
     // =====================================
     .featured-projects {
         // background: midnightblue;
+        opacity: 1; // for nothing, just to stop scss watcher from complaining
     }
 
     .featured-project {
@@ -116,7 +174,7 @@
         // gap: 10px;
         margin-bottom: 4rem;
 
-        opacity: 0; // prepare for scroll fade in
+        opacity: 0; // prepare for scroll fade
     }
 
     img {
@@ -132,8 +190,6 @@
 
         color: $medium-text-color;
         text-align: right;
-
-        
     }
 
     .side-project-info-flipped {

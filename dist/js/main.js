@@ -65,8 +65,8 @@ function closeMenu() {
     blurLayer.classList.remove('blur') // remove blur
 }
 
-
-// scroll fade in
+// ======================================================
+// Scroll fade in
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -76,7 +76,9 @@ const observer = new IntersectionObserver(entries => {
     })
 })
 
-let projects = document.querySelectorAll('.featured-project, h2')
+// grab all the elements to be observed
+let projects = document.querySelectorAll('.featured-project, .section-heading, .about__content')
 projects.forEach(project => {
     observer.observe(project)
 })
+// ======================================================
