@@ -1,4 +1,22 @@
 @import url(/dist/font/stylesheet.css);
+.fade-in-scroll {
+  -webkit-animation: fade-in 1s forwards;
+          animation: fade-in 1s forwards;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+@-webkit-keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
 header {
   background: rgba(51, 51, 51, 0.6);
   -webkit-backdrop-filter: blur(10px);
@@ -157,13 +175,14 @@ header li {
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
 }
-.home h2 {
+.home .section-heading {
   padding: 1rem 0;
   display: flex;
   align-items: center;
   margin: 2rem 0;
+  opacity: 0;
 }
-.home h2::after {
+.home .section-heading::after {
   content: "";
   display: block;
   height: 1px;
@@ -179,6 +198,7 @@ header li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 4rem;
+  opacity: 0;
 }
 .home img {
   width: 100%;

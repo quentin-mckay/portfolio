@@ -68,13 +68,17 @@
         border-right: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
     }
+
+
     // Featured Projects
-    h2 {
+    .section-heading {
         padding: 1rem 0;
         display: flex;
         align-items: center;
         margin: 2rem 0;
         
+        opacity: 0; // prepare for scroll fade in
+
 
         &::after {
             content: "";
@@ -111,6 +115,8 @@
         grid-template-columns: 1fr 1fr;
         // gap: 10px;
         margin-bottom: 4rem;
+
+        opacity: 0; // prepare for scroll fade in
     }
 
     img {

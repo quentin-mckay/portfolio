@@ -47,18 +47,36 @@ menuButtonBurger.addEventListener('click', () => {
     blurLayer.classList.add('blur') // add blur effect
 })
 
-// on mobile menu close
+// close mobile menu if click X button
 menuButtonX.addEventListener('click', () => {
     console.log('close button clicked')
     
     closeMenu()
 })
 
+// close the mobile menu if click outside the menu
 main.addEventListener('click', closeMenu)
 
+// factor out closeMenu as it will be called from multiple places
 function closeMenu() {
     nav.classList.remove('open-nav')
     menuButtonX.style.display = "none"
     document.body.classList.remove('disable-scroll') // enable scrolling
     blurLayer.classList.remove('blur') // remove blur
 }
+
+
+// scroll fade in
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log('intersect')
+            entry.target.classList.add('fade-in-scroll')
+        }
+    })
+})
+
+let projects = document.querySelectorAll('.featured-project, h2')
+projects.forEach(project => {
+    observer.observe(project)
+})

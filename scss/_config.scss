@@ -45,3 +45,22 @@ $mobile-menu-bg: #555;
 $mobile-width: 768px;
 
 // ====== Project Page ======
+
+
+
+
+
+
+
+// ====== Animations ======
+.fade-in-scroll {
+    animation: fade-in 1s forwards;
+    animation-delay: 0.2s;
+}
+
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+    }
+}
