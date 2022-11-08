@@ -107,7 +107,7 @@ header li {
   overflow-y: hidden;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   body {
     background: slateblue;
   }
@@ -295,7 +295,7 @@ header li {
   width: 40px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .home .about__content {
     display: block;
   }
@@ -413,18 +413,48 @@ header li {
 .blog .card-2023 {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../images/2023.jpg") center;
 }
+.blog .card-toothpicks {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../images/toothpicks.jpg") center;
+}
+.blog .card-feet {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../images/feet.jpg") center;
+}
 .blog .date {
   margin-top: 1rem;
   font-size: 0.9rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .blog .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .blog .cards {
+    grid-template-columns: 1fr;
+  }
+}
 .blog-single {
   margin: 5rem auto;
   width: 80%;
 }
 .blog-single .main-picture {
   height: 40vh;
+}
+.blog-single .main-picture.wireframing {
   background: linear-gradient(rgba(0, 0, 0, 0), #1d1d1d), url("../images/wireframe2.jpg") center/cover;
+}
+.blog-single .main-picture.feet {
+  background: linear-gradient(rgba(0, 0, 0, 0), #1d1d1d), url("../images/feet.jpg") center/cover;
+}
+.blog-single .main-picture.toothpicks {
+  background: linear-gradient(rgba(0, 0, 0, 0), #1d1d1d), url("../images/toothpicks.jpg") center/cover;
+}
+.blog-single .main-picture.twenty {
+  background: linear-gradient(rgba(0, 0, 0, 0), #1d1d1d), url("../images/2023.jpg") center/cover;
+}
+.blog-single .main-picture.orange {
+  background: linear-gradient(rgba(0, 0, 0, 0), #1d1d1d), url("../images/orange2.jpg") center/cover;
 }
 .blog-single .content-wrapper {
   width: 70%;
@@ -432,6 +462,7 @@ header li {
 }
 .blog-single h1 {
   padding: 0 2rem;
+  padding-top: 1.5rem;
   text-align: center;
 }
 .blog-single p {
@@ -553,7 +584,7 @@ a {
   margin-top: 24px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .email-right {
     display: none;
   }

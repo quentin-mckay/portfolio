@@ -4,9 +4,33 @@
 
     .main-picture {
         height: 40vh;
-        background: 
-            linear-gradient(rgba(0,0,0,0), rgba($bg-color,1) ),
-        url('../images/wireframe2.jpg') center/cover; // shorthand for background-position
+
+        &.wireframing {
+            background: 
+                linear-gradient(rgba(0,0,0,0), rgba($bg-color,1) ),
+                url('../images/wireframe2.jpg') center/cover; // shorthand for background-position
+        }
+        &.feet {
+            background: 
+                linear-gradient(rgba(0,0,0,0), rgba($bg-color,1) ),
+                url('../images/feet.jpg') center/cover; // shorthand for background-position
+        }
+        &.toothpicks {
+            background: 
+                linear-gradient(rgba(0,0,0,0), rgba($bg-color,1) ),
+                url('../images/toothpicks.jpg') center/cover; // shorthand for background-position
+        }
+        &.twenty {
+            background: 
+                linear-gradient(rgba(0,0,0,0), rgba($bg-color,1) ),
+                url('../images/2023.jpg') center/cover; // shorthand for background-position
+        }
+        &.orange {
+            background: 
+                linear-gradient(rgba(0,0,0,0), rgba($bg-color,1) ),
+                url('../images/orange2.jpg') center/cover; // shorthand for background-position
+        }
+        
     }
 
     .content-wrapper {
@@ -16,6 +40,7 @@
 
     h1 {
         padding: 0 2rem;
+        padding-top: 1.5rem;
         text-align: center;
 
         // pulling the h1 up overlapping the image looks pretty cool

@@ -39,11 +39,38 @@
                 url('../images/2023.jpg') center;
         }
 
-        
+        &-toothpicks {
+            background: 
+                linear-gradient(rgba(0,0,0,0), $card-gradient-dark-opacity),
+                url('../images/toothpicks.jpg') center;
+        }
+        &-feet {
+            background: 
+                linear-gradient(rgba(0,0,0,0), $card-gradient-dark-opacity),
+                url('../images/feet.jpg') center;
+        }
     }
 
     .date {
         margin-top: 1rem;
         font-size: 0.9rem;
+    }
+}
+
+
+
+@media only screen and (max-width: $tablet-width) {
+    .blog {
+        .cards {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .blog {
+        .cards {
+            grid-template-columns: 1fr;
+        }
     }
 }
