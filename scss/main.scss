@@ -34,6 +34,7 @@ body {
 
     font-size: 1.1rem;
     line-height: 1.3;
+    letter-spacing: 0.3px;
 
     // ====== scrollbar styles ======
     &::-webkit-scrollbar {
@@ -56,14 +57,16 @@ a {
     text-decoration: none;
 }
 
-
+// not 
 .blur-layer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     transform: all 0.25s; // for blur effecct
+
+    z-index: 99;  // just under the header
 }
 
 .blur {

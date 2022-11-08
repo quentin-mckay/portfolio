@@ -34,7 +34,7 @@ header {
 
 
         &::before {
-            content: "/quentin/";
+            content: "/q/";
             position: absolute;
             top: -$color-spread;
             left: -$color-spread;
@@ -43,7 +43,7 @@ header {
         }
 
         &::after {
-            content: "/quentin/";
+            content: "/q/";
             position: absolute;
             bottom: -$color-spread;
             right: -$color-spread;

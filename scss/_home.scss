@@ -69,7 +69,7 @@
         border-right: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
     }
-
+    
 
     // h2's
     .section-heading {
@@ -77,6 +77,8 @@
         display: flex;
         align-items: center;
         margin: 2rem 0;
+
+        font-size: 3rem;
         
         opacity: 0; // prepare for scroll fade in
 
@@ -98,6 +100,12 @@
         font-size: 1.6rem;
         color: $light-text-color;
     }
+
+
+
+
+
+
 
     // =====================================
     // About Section
@@ -160,10 +168,17 @@
         }
     }
     
+
+
+
+
+
+
     // =====================================
     // Featured Projects Section
     // =====================================
     .featured-projects {
+        padding-top: 6rem;
         // background: midnightblue;
         opacity: 1; // for nothing, just to stop scss watcher from complaining
     }
@@ -172,7 +187,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         // gap: 10px;
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
+
+        min-height: 200px;
 
         opacity: 0; // prepare for scroll fade
     }
@@ -218,7 +235,7 @@
 
     .tech {
         display: inline-block;
-        padding: 0 10px;
+        padding: 5px 10px;
     }
 
     .github-link path {
@@ -241,9 +258,41 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ====== Mobile ======
 @media only screen and (max-width: $mobile-width) {
     .home {
+
+        .about {
+            &__content {
+                // grid-template-columns: 1fr;
+                display: block;
+            }
+
+            img {
+                margin-top: 30px;
+                width: 60%;
+            }
+        }
+
+
+
+        .featured-projects {
+            padding-top: 1rem;
+        }
+        
         .featured-project {
             grid-template-columns: 1fr; // stack on top of each other
         }
@@ -258,6 +307,15 @@
             // just added this to original class above
             order: 1; 
         }
-    }
 
+        .project-details {
+            width: 100%; // no overlap into picture needed
+        }
+
+
+        
+
+
+        
+    }
 } 
