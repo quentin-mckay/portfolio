@@ -319,6 +319,96 @@ header li {
     width: 100%;
   }
 }
+.projects .project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.projects img {
+  width: 100%;
+  border-radius: 8px;
+}
+.projects .side-project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  color: #999;
+  text-align: right;
+}
+.projects .side-project-info-flipped {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: #999;
+  text-align: left;
+}
+.projects .project-title {
+  color: #ddd;
+  font-size: 1.6rem;
+}
+.projects .project-details {
+  background: #222;
+  border-radius: 8px;
+  padding: 20px;
+  width: 110%;
+  z-index: 1;
+}
+.projects .tech-list {
+  font-family: "Fire Code", monospace;
+  font-size: 0.9rem;
+}
+.projects .tech {
+  display: inline-block;
+  padding: 5px 10px;
+}
+.projects .github-link path {
+  fill: white;
+}
+.projects .demo-link {
+  transform: scale(0.6);
+  margin-top: -5px;
+}
+.projects .demo-link svg {
+  width: 32px;
+  transition: all 0.25s;
+}
+.projects .demo-link svg:hover {
+  transform: scale(1.7);
+}
+.projects .demo-link svg:hover path {
+  stroke: #08fdd8;
+}
+.projects .icon-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.projects .github-link svg {
+  width: 40px;
+  transition: all 0.25s;
+}
+.projects .github-link svg:hover {
+  transform: scale(1.7);
+}
+.projects .github-link svg:hover path {
+  fill: #08fdd8;
+}
+
+@media only screen and (max-width: 800px) {
+  .projects .project {
+    grid-template-columns: 1fr;
+  }
+  .projects .side-project-info, .projects .side-project-info-flipped {
+    height: 25vh;
+  }
+  .projects .side-project-info-flipped {
+    order: 1;
+  }
+  .projects .project-details {
+    width: 100%;
+  }
+}
 .project {
   width: 80%;
   max-width: 800px;

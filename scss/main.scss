@@ -3,6 +3,7 @@
 @import url(/dist/font/stylesheet.css); // bring in downloaded
 @import 'header';
 @import 'home';
+@import 'projects';
 @import 'project';
 @import 'blog';
 @import 'blog-single';
@@ -96,7 +97,8 @@ a {
     // padding didn't work on svg (not sure why)
     svg {
         transform: scale(1.2);
-        transition: all 0.25s;
+        // transition: all 0.25s;
+        transition: all $svg-transition-time;
 
         &:hover {
             transform: scale(1.7);

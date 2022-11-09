@@ -1,0 +1,143 @@
+.projects {
+
+    .project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // gap: 10px;
+        // margin-bottom: 6rem;
+
+        // min-height: 200px;
+
+        // opacity: 0; // prepare for scroll fade
+    }
+
+    img {
+        width: 100%;
+        border-radius: $border-radius;
+    }
+
+    .side-project-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end; // move stuff to right side
+
+        color: $medium-text-color;
+        text-align: right;
+    }
+
+    .side-project-info-flipped {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start; // move stuff to left side
+
+        color: $medium-text-color;
+        text-align: left;
+    }
+
+    .project-title {
+        color: $light-text-color;
+        font-size: 1.6rem;
+    }
+
+    .project-details {
+        background: #222;
+        border-radius: $border-radius;
+        padding: 20px;
+
+        width: 110%;
+        z-index: 1; // place it on top of project image
+    }
+
+    .tech-list {
+        font-family: $mono-font;
+        font-size: 0.9rem;
+    }
+
+    .tech {
+        display: inline-block;
+        padding: 5px 10px;
+        // padding-left: 5px;
+        // border-left: 1px solid rgba($red-color, 0.5);
+        // background: linear-gradient(to right, rgba($red-color, 0.8), rgba($bg-color,0.1) 10%);
+
+        &:not(:first-child) {
+            // border-left: 1px solid rgba($red-color, 0.5);
+        }
+    }
+
+    .github-link path {
+        fill: white;
+    }
+
+    .demo-link {
+        // hacky as hell but I don't know how to style SVG's yet
+        transform: scale(0.6);
+        margin-top: -5px;
+
+        // transition: all $svg-transition-time;
+
+        svg {
+            width: 32px;
+
+            transition: all $svg-transition-time;
+
+            &:hover {
+                transform: scale(1.7);
+                // fill: $green-color;
+    
+                path {
+                    stroke: $green-color;
+                }
+            }
+        }
+    }
+
+    .icon-links {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .github-link svg {
+        width: 40px;
+
+        transition: all $svg-transition-time;
+
+        &:hover {
+            transform: scale(1.7);
+            // fill: $green-color;
+
+            path {
+                fill: $green-color;
+            }
+        }
+    }
+
+    
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .projects {
+        .project {
+            grid-template-columns: 1fr; // stack on top of each other
+        }
+
+        .side-project-info, .side-project-info-flipped {
+            height: 25vh; // spread it out a bit
+        }
+    
+        .side-project-info-flipped {
+            // move the info below the image.
+            // should have left the HTML unflipped and 
+            // just added this to original class above
+            order: 1; 
+        }
+
+        .project-details {
+            width: 100%; // no overlap into picture needed
+        }
+    }
+}
