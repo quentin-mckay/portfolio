@@ -273,6 +273,7 @@
         }
     }
 
+    
     .icon-links {
         display: flex;
         align-items: center;
@@ -280,8 +281,83 @@
 
     svg {
         width: 40px;
+    }
 
-        
+
+
+
+
+    // =====================================
+    // Contact Form
+    // =====================================
+
+    .contact {
+        margin: 8rem 4rem;
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+
+            font-family: Calibre;
+
+            input, textarea{
+                display: block;
+                background: #333;
+                color: $medium-text-color;
+
+                font-family: Nunito, sans-serif;
+                font-size: 16px;
+
+                padding: 16px;
+                outline: none;
+                border: none;
+                border-left: 1px solid $green-color;
+
+                position: relative;
+    
+                // nice trick to remove placeholder text on focus
+                &:focus::placeholder {
+                    color: transparent;
+                }
+
+                &::after {
+                    // content: "asdf";
+                    // position: absolute;
+                    // bottom: 0;
+                    // left: 0;
+                    // width: 100%;
+                    // height: 1px;
+                    // background: $green-color;
+                }
+            }
+
+            .subject {
+                grid-column: 1 / 3;
+            }
+
+            .message {
+                grid-column: 1 / 3;
+            }
+
+            .submit {
+                background: none;
+                color: $green-color;
+                background: $bg-color;;
+                border: 1px solid $green-color;
+
+                margin-top: 20px;
+
+                // place in bottom right corner
+                grid-column: 2 / 3;
+                justify-self: end;
+
+                &:hover {
+                    background: rgba($green-color, 0.05);
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 
