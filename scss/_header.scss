@@ -141,7 +141,9 @@ header {
 
 .disable-scroll {
     // not sure why this disables scrolling but it works
-    overflow-y: hidden;
+    // the problem is it hides scrollbar as well so everything snaps over
+
+    // overflow-y: hidden;
 }
 
 

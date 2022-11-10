@@ -119,10 +119,6 @@ nav li:nth-child(4) {
   display: block;
 }
 
-.disable-scroll {
-  overflow-y: hidden;
-}
-
 @media only screen and (max-width: 800px) {
   body {
     background: slateblue;
@@ -647,11 +643,16 @@ canvas {
   transform: all 0.25s;
   pointer-events: none;
   z-index: 99;
+  transition: -webkit-backdrop-filter 0.8s;
+  transition: backdrop-filter 0.8s;
+  transition: backdrop-filter 0.8s, -webkit-backdrop-filter 0.8s;
+  -webkit-backdrop-filter: blur(4px) opacity(0);
+          backdrop-filter: blur(4px) opacity(0);
 }
 
 .blur {
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px) opacity(1);
+          backdrop-filter: blur(4px) opacity(1);
 }
 
 .icons {

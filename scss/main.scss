@@ -1,4 +1,8 @@
 // ====== Import Partials ======
+
+// I think we're supposed to use @use nowadays
+// but I haven't looked into it yet
+
 @import 'config';
 @import url(/dist/font/stylesheet.css); // bring in downloaded
 @import 'header';
@@ -82,10 +86,14 @@ canvas {
     pointer-events: none;
 
     z-index: 99;  // just under the header
+
+    // fade opacity of blur layer to simulate animation of blur effect
+    transition: backdrop-filter 0.8s;
+    backdrop-filter: blur(4px) opacity(0);
 }
 
 .blur {
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px) opacity(1);
 }
 
 .icons {
