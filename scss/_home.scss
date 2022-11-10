@@ -292,9 +292,13 @@
     // =====================================
 
     .contact {
-        margin: 8rem 4rem;
+        margin: 8rem 0;
+
+        
 
         form {
+            margin: 0 3rem;
+
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 10px;
