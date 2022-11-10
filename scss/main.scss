@@ -72,12 +72,13 @@ a {
 canvas {
     position: fixed;
     // top: -25px; // cheap fix for name position
+    // transform: translateY(10px);
     z-index: -1;
     // display: none;
     // pointer-events: none;
 
     @include fade-in-delay($delay-canvas);
-    animation-duration: 10s;
+    animation-duration: 10s; // override mixin above used for everything else
 }
 
 

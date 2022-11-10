@@ -129,6 +129,11 @@ nav li:nth-child(4) {
   display: none;
   width: 2.5rem;
   cursor: pointer;
+  opacity: 0;
+  -webkit-animation: fade-in-homepage 2s forwards;
+          animation: fade-in-homepage 2s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .menu-btn-x {

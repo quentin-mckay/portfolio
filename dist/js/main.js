@@ -80,7 +80,7 @@ const observer = new IntersectionObserver(entries => {
 })
 
 // grab all the elements to be observed
-let projects = document.querySelectorAll('.featured-project, .section-heading, .about__content')
+let projects = document.querySelectorAll('.featured-project, .section-heading, .about__content, .contact')
 projects.forEach(project => {
     observer.observe(project)
 })
