@@ -67,26 +67,37 @@ header {
                 color: $green-color;
             }
         }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        li {
+            list-style: none;
+
+            transition: transform 0.5s;
+        }
+
+        &.open-nav li {
+            // background: red;
+            transform: translatex(-100%);
+        }
+
+        
     }
 
-    ul {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    li {
-        list-style: none;
-    }
+    
 
     
 }
 
 
-// @for $i from 1 through 4 {
-//     nav li:nth-child(#{$i}) {
-//         transition-delay: ($i * 0.1s);
-//     }
-// }
+@for $i from 1 through 4 {
+    nav li:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s);
+    }
+}
 
 
 
@@ -110,7 +121,7 @@ header {
     top: 0;
     right: 0;
     width: 40px;
-    margin: 0.8rem 2.6rem;
+    margin: 0.8rem 2.6rem; // positioning the svg. yuck
     // z-index: 2;
 }
 
@@ -120,8 +131,9 @@ header {
 
 // when .open-nav class is applied on button click
 .open-nav {
-    transform: translateX(-100%); // slide in the full width of itself right to left
+    // transform: translateX(-100%); // slide in the full width of itself right to left
 }
+
 
 .menu-btn-x-show {
     display: block;
@@ -129,7 +141,7 @@ header {
 
 .disable-scroll {
     // not sure why this disables scrolling but it works
-    overflow-y: hidden;
+    // overflow-y: hidden;
 }
 
 
@@ -142,7 +154,7 @@ header {
     }
 
     .menu-btn-burger {
-        display: block;  // show
+        display: block;  // show on mobile
     }
 
     // mobile nav
@@ -151,7 +163,7 @@ header {
         position: fixed;
         top: 0;
         right: 0;
-        width: 50%;
+        width: 30%;
         // height: 100vh;
 
         left: 100%; // snap it off to the right side of the page by default
@@ -165,22 +177,32 @@ header {
             // align-items: center; // horizontal centering
             justify-content: flex-start; // stay at top
             // height: 100%;
+            gap: 10px;
 
             margin-top: 5rem;
         }
 
         // padding needs to be on li's, NOT a's
         li {
+            // background: #333;
             padding: 2rem;
-            background: #333;
-            border: 1px solid pink;
+            border: 1px solid $green-color;
+            border-right: none;
+            border-radius: $mobile-menu-border-radius 0 0 $mobile-menu-border-radius;
         }
-
-        a {
-            color: orange;
-            background: #222;
-        }
-
         
+        a {
+            color: white;
+            // background: #222;
+        }
+
+
     }
 }
+
+// @media only screen and (min-width: $mobile-width) {
+//     .menu-btn-burger {
+//         display: none;
+//         background: pink;
+//     }
+// }

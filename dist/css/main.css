@@ -66,12 +66,32 @@ header nav a {
 header nav a:hover {
   color: #08fdd8;
 }
-header ul {
+header nav ul {
   display: flex;
   justify-content: space-between;
 }
-header li {
+header nav li {
   list-style: none;
+  transition: transform 0.5s;
+}
+header nav.open-nav li {
+  transform: translatex(-100%);
+}
+
+nav li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+nav li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+nav li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+nav li:nth-child(4) {
+  transition-delay: 0.4s;
 }
 
 .hide-header {
@@ -95,16 +115,8 @@ header li {
   margin: 0.8rem 2.6rem;
 }
 
-.open-nav {
-  transform: translateX(-100%);
-}
-
 .menu-btn-x-show {
   display: block;
-}
-
-.disable-scroll {
-  overflow-y: hidden;
 }
 
 @media only screen and (max-width: 800px) {
@@ -119,7 +131,7 @@ header li {
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 30%;
     left: 100%;
     border-radius: 0 0 0 4px;
   }
@@ -127,16 +139,17 @@ header li {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 10px;
     margin-top: 5rem;
   }
   nav li {
     padding: 2rem;
-    background: #333;
-    border: 1px solid pink;
+    border: 1px solid #08fdd8;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
   }
   nav a {
-    color: orange;
-    background: #222;
+    color: white;
   }
 }
 .home {

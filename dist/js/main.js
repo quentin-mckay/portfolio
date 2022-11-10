@@ -1,6 +1,7 @@
 // ====== Hook variables up to DOM ======
 const menuButtonBurger = document.querySelector('.menu-btn-burger')
 const menuButtonX = document.querySelector('.menu-btn-x')
+
 const nav = document.querySelector('nav')
 
 const header = document.querySelector('header')
@@ -40,6 +41,7 @@ menuButtonBurger.addEventListener('click', () => {
 
     nav.classList.add('open-nav') // adds class which transform: translate(0) to show mobile menu
 
+    // menuButtonBurger.style.display = "none"
     menuButtonX.style.display = "block" // show the X button
 
     document.body.classList.add('disable-scroll') // disable scrolling
@@ -61,6 +63,7 @@ main.addEventListener('click', closeMenu)
 function closeMenu() {
     nav.classList.remove('open-nav')
     menuButtonX.style.display = "none"
+    // menuButtonBurger.style.display = "block"
     document.body.classList.remove('disable-scroll') // enable scrolling
     blurLayer.classList.remove('blur') // remove blur
 }
