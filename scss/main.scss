@@ -28,6 +28,10 @@
     padding: 0;
 }
 
+html {
+    // scroll-behavior: smooth; // smooth scroll to contact section
+}
+
 // site wide styles
 body {
     z-index: 0;
@@ -71,6 +75,9 @@ canvas {
     z-index: -1;
     // display: none;
     // pointer-events: none;
+
+    @include fade-in-delay($delay-canvas);
+    animation-duration: 10s;
 }
 
 
@@ -96,6 +103,7 @@ canvas {
     backdrop-filter: blur(4px) opacity(1);
 }
 
+
 .icons {
     position: fixed;
     left: 40px;
@@ -106,6 +114,8 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include fade-in-delay($delay-icons);
 
     path {
         fill: white;
@@ -163,6 +173,8 @@ canvas {
     display: flex;
     align-items: center;
 
+    @include fade-in-delay($delay-email);
+
     a {
         transition: all 0.25s;
 
@@ -181,8 +193,13 @@ canvas {
         background: white;
         margin-top: 24px;
     }
+
 }
 
+
+
+    
+    
 
 
 // ====== Media Queries ======

@@ -62,12 +62,37 @@ $tablet-width: 1024px;
 }
 
 
+// for fade in on scroll elements
 @keyframes fade-in {
     100% {
         opacity: 1;
     }
 }
 
+@mixin fade-in-delay($delay) {
+    opacity: 0;
+    animation: fade-in-homepage 2s forwards;
+    animation-delay: $delay;
+}
+
+// for home page fade-ins
+@keyframes fade-in-homepage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+$delay-logo: 0.5s;
+$delay-nav: 1s;
+$delay-hi: 2s;
+$delay-undername: 2s;
+$delay-icons: 1.5s;
+$delay-email: 1.5s;
+$delay-canvas: 0s;
 
 
 // === z-index reference ===

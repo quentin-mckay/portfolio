@@ -23,6 +23,8 @@
         border-left: 1px solid $border-color;
         border-top: 1px solid $border-color;
         align-self: flex-start;
+
+        @include fade-in-delay($delay-hi);
     }
 
     .name {
@@ -69,6 +71,8 @@
 
         border-right: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
+
+        @include fade-in-delay($delay-undername);
     }
     
 
@@ -294,8 +298,6 @@
     .contact {
         margin: 8rem 0;
 
-        
-
         form {
             margin: 0 3rem;
 
@@ -317,14 +319,14 @@
                 outline: none;
                 border: none;
                 border-left: 1px solid $green-color;
-
+                
                 position: relative;
-    
+                
                 // nice trick to remove placeholder text on focus
                 &:focus::placeholder {
                     color: transparent;
                 }
-
+                
                 &::after {
                     // content: "asdf";
                     // position: absolute;
@@ -335,28 +337,31 @@
                     // background: $green-color;
                 }
             }
-
+            
             .subject {
                 grid-column: 1 / 3;
             }
-
+            
             .message {
                 grid-column: 1 / 3;
             }
-
+            
             .submit {
-                background: none;
                 color: $green-color;
                 background: $bg-color;;
-                border: 1px solid $green-color;
 
+                border: 1px solid $green-color;
+                border-radius: 3px;
+                
                 margin-top: 20px;
+                padding: 10px 20px;
 
                 // place in bottom right corner
                 grid-column: 2 / 3;
                 justify-self: end;
 
                 &:hover {
+                    transition: all 0.3s;
                     background: rgba($green-color, 0.05);
                     cursor: pointer;
                 }
