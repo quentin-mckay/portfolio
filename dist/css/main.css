@@ -726,11 +726,6 @@ a {
 canvas {
   position: fixed;
   z-index: -1;
-  opacity: 0;
-  -webkit-animation: fade-in-homepage 2s forwards;
-          animation: fade-in-homepage 2s forwards;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
 }

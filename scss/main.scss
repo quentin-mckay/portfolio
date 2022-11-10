@@ -77,7 +77,7 @@ canvas {
     // display: none;
     // pointer-events: none;
 
-    @include fade-in-delay($delay-canvas);
+    // @include fade-in-delay($delay-canvas);
     animation-duration: 10s; // override mixin above used for everything else
 }
 
