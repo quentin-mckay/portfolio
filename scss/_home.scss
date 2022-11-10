@@ -239,6 +239,19 @@
         padding: 5px 10px;
     }
 
+    .github-link {
+        transition: all $svg-transition-time;
+
+        &:hover {
+            transform: scale(1.2);
+            fill: $green-color;
+
+            path {
+                fill: $green-color;
+            }
+        }
+    }
+
     .github-link path {
         fill: white;
     }
@@ -247,6 +260,17 @@
         // hacky as hell but I don't know how to style SVG's yet
         transform: scale(0.6);
         margin-top: -5px;
+
+        transition: all $svg-transition-time;
+
+        &:hover {
+            transform: scale(0.8);
+            fill: $green-color;
+
+            path {
+                stroke: $green-color;
+            }
+        }
     }
 
     .icon-links {
@@ -256,6 +280,8 @@
 
     svg {
         width: 40px;
+
+        
     }
 }
 

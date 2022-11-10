@@ -119,6 +119,10 @@ nav li:nth-child(4) {
   display: block;
 }
 
+.disable-scroll {
+  overflow-y: hidden;
+}
+
 @media only screen and (max-width: 800px) {
   body {
     background: slateblue;
@@ -143,6 +147,7 @@ nav li:nth-child(4) {
     margin-top: 5rem;
   }
   nav li {
+    background: rgba(8, 253, 216, 0.02);
     padding: 2rem;
     border: 1px solid #08fdd8;
     border-right: none;
@@ -295,12 +300,30 @@ nav li:nth-child(4) {
   display: inline-block;
   padding: 5px 10px;
 }
+.home .github-link {
+  transition: all 0.25s;
+}
+.home .github-link:hover {
+  transform: scale(1.2);
+  fill: #08fdd8;
+}
+.home .github-link:hover path {
+  fill: #08fdd8;
+}
 .home .github-link path {
   fill: white;
 }
 .home .demo-link {
   transform: scale(0.6);
   margin-top: -5px;
+  transition: all 0.25s;
+}
+.home .demo-link:hover {
+  transform: scale(0.8);
+  fill: #08fdd8;
+}
+.home .demo-link:hover path {
+  stroke: #08fdd8;
 }
 .home .icon-links {
   display: flex;
@@ -584,6 +607,7 @@ nav li:nth-child(4) {
 }
 
 body {
+  z-index: 0;
   background: #1D1D1D;
   color: #ddd;
   font-family: "neurial_groteskregular";
@@ -611,7 +635,7 @@ a {
 
 canvas {
   position: fixed;
-  z-index: 0;
+  z-index: -1;
 }
 
 .blur-layer {
@@ -621,6 +645,7 @@ canvas {
   width: 100vw;
   height: 100vh;
   transform: all 0.25s;
+  pointer-events: none;
   z-index: 99;
 }
 
@@ -702,10 +727,10 @@ canvas {
     display: none;
   }
   .icons {
-    background: blue;
     position: static;
     width: 100%;
     padding: 10px;
+    margin-top: 4px;
     display: flex;
     flex-direction: row;
     justify-content: center;

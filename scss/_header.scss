@@ -1,5 +1,5 @@
 
-// ====== Desktop first approach (I know, I know. Should be mobile-first) ======
+// ====== Desktop first approach (I know. Should be mobile-first it's what I'm used to) ======
 header {
     background: rgba(51, 51, 51, $header-opacity);
     backdrop-filter: blur($header-blur-amount);
@@ -22,7 +22,7 @@ header {
 
     z-index: 100; // so it stays above everything
 
-    transition: transform 0.25s;
+    transition: transform 0.25s; // for hiding - showing on scroll
 
     
 
@@ -141,7 +141,7 @@ header {
 
 .disable-scroll {
     // not sure why this disables scrolling but it works
-    // overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 
@@ -184,7 +184,7 @@ header {
 
         // padding needs to be on li's, NOT a's
         li {
-            // background: #333;
+            background: rgba($green-color, 0.02);
             padding: 2rem;
             border: 1px solid $green-color;
             border-right: none;

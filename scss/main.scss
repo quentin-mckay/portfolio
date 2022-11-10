@@ -26,6 +26,7 @@
 
 // site wide styles
 body {
+    z-index: 0;
     background: $bg-color;
     color: $light-text-color;
     // font-family: sans-serif;
@@ -63,17 +64,10 @@ a {
 canvas {
     position: fixed;
     // top: -25px; // cheap fix for name position
-    z-index: 0;
+    z-index: -1;
     // display: none;
     // pointer-events: none;
 }
-
-
-
-
-
-
-
 
 
 
@@ -83,9 +77,10 @@ canvas {
     left: 0;
     width: 100vw;
     height: 100vh;
-    transform: all 0.25s; // for blur effecct
+    transform: all 0.25s; // for blur effect
 
-    // pointer-events: none;
+    pointer-events: none;
+
     z-index: 99;  // just under the header
 }
 
@@ -190,10 +185,11 @@ canvas {
 
     // put icons at bottom center of page
     .icons {
-        background: blue;
+        // background: blue;
         position: static; // return to normal html defined flow
         width: 100%;
         padding: 10px;
+        margin-top: 4px;
 
         display: flex;
         flex-direction: row;

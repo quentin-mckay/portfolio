@@ -87,9 +87,9 @@ projects.forEach(project => {
 // ======================================================
 
 
-document.getElementById("glcanvas").onwheel =function(){
-    window.addEventListener('DOMMouseScroll', wheel, true);
-}
+// document.getElementById("glcanvas").onwheel =function(){
+//     window.addEventListener('DOMMouseScroll', wheel, true);
+// }
 
 function patchInitialized(patch) {
     // You can now access the patch object (patch), register variable watchers and so on
