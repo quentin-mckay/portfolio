@@ -64,6 +64,7 @@
 
         &:not(:first-child) {
             // border-left: 1px solid rgba($red-color, 0.5);
+            opacity: 1;
         }
     }
 

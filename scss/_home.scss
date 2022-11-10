@@ -26,6 +26,7 @@
     }
 
     .name {
+        visibility: hidden;
         // fluid size scales with window width but stays within 20-80px
         font-size: clamp(20px, 8vw, 80px);
 
@@ -61,7 +62,7 @@
         color: $red-color;
         font-family: 'Fira Code', monospace;
         font-size: 1.3rem;
-        margin-top: 1.5rem;
+        margin-top: 4rem;
         padding-right: 3px;
 
         align-self: flex-end;

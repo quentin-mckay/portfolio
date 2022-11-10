@@ -58,7 +58,25 @@ a {
     text-decoration: none;
 }
 
-// not 
+
+
+canvas {
+    position: fixed;
+    // top: -25px; // cheap fix for name position
+    z-index: 0;
+    // display: none;
+    // pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
 .blur-layer {
     position: fixed;
     top: 0;
@@ -67,6 +85,7 @@ a {
     height: 100vh;
     transform: all 0.25s; // for blur effecct
 
+    // pointer-events: none;
     z-index: 99;  // just under the header
 }
 
