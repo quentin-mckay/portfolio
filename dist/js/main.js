@@ -137,7 +137,7 @@ document.body.style.width = `${width}px`
 window.addEventListener('resize', () => {
     
     let width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    console.log('width: ', width)
+    // console.log('width: ', width)
     
     document.body.style.width = `${width}px`
 })
