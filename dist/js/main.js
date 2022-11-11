@@ -77,17 +77,18 @@ function closeMenu() {
 }
 
 // ======================================================
-// Scroll fade in
+// add class to all observed elements when they intersect the viewport
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            console.log('intersect')
+            // console.log('intersect')
             entry.target.classList.add('fade-in-scroll')
         }
     })
 })
 
-// grab all the elements to be observed
+// grab all the elements to be observed.
+// I'm sure there's a better way to do this.
 let projects = document.querySelectorAll('.featured-project, .section-heading, .about__content, .contact')
 projects.forEach(project => {
     observer.observe(project)
@@ -99,6 +100,8 @@ projects.forEach(project => {
 //     window.addEventListener('DOMMouseScroll', wheel, true);
 // }
 
+// ==================================
+// load cables.gl patch
 function patchInitialized(patch) {
     // You can now access the patch object (patch), register variable watchers and so on
 }
@@ -122,7 +125,7 @@ document.addEventListener('CABLES.jsLoaded', function (event) {
 });
 
 
-
+// ===================================================
 // horrible hacky fix here. to be fixed later
 // cables embedded patch is messing with the mobile view body width
 // so I'm overriding it until I figure out the issue.

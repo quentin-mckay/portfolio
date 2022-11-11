@@ -152,16 +152,68 @@ The site features a homepage with 3 selected projects and contact form. A nav me
 }
 ```
 
+### Navbar that hides on scroll down and slides down on scroll up
+```js
+let prevScrollPos = window.pageYOffset
+
+window.addEventListener('scroll', () => {
+
+    const currentScrollPos = window.pageYOffset
+    
+    // if scrolling down
+    if (currentScrollPos > prevScrollPos) {
+        // header.style.top = "-50px"
+        // header.style.transform = "translateY(-100%)"
+        header.classList.add('hide-header')
+        // console.log('down')
+    }
+    // if scrolling up
+    else {
+        // header.style.top = "0"
+        // header.style.transform = "initial"
+        header.classList.remove('hide-header')
+        // console.log('up')
+    }
+    
+    prevScrollPos = currentScrollPos
+})
+```
+
+### Using the IntersectionObserver API to fade elements when they enter the viewport
+```js
+// add class to all observed elements when they intersect the viewport
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // console.log('intersect')
+            entry.target.classList.add('fade-in-scroll')
+        }
+    })
+})
+
+// grab all the elements to be observed
+// I'm sure there's a better way to do this.
+let projects = document.querySelectorAll('.featured-project, .section-heading, .about__content, .contact')
+projects.forEach(project => {
+    observer.observe(project)
+})
+```
+
+
+
+
 ### Point cloud effect
 
-Words texture is randomly sampled to create an array of points.  
+Used realtime visual patching environment [cables.gl](https://cables.gl/home)
 
-Animation started on load drives interpolation between that array and another array of random points (which has a sine function with modulating phase applied). 
+String texture is randomly sampled to create an array of points.  
 
-`window.pageYOffset` is then used to transform the viewmatrix and drive interpolation to a 3rd array of random points.
+Animation on page load drives interpolation between that array and another array of random 3d points (which has a sine function with modulating phase applied). 
 
-Point opacity is controlled by a perlin noise texture.
+`window.pageYOffset` is then used to transform the viewmatrix in Y axis and drive interpolation to a 3rd array of random points (to spread them back out)
 
-![cables patch](./dist/images/readme/cables.jpg)
+Point opacity is controlled by sampling a perlin noise texture (for the sparkle effect).
+
+![cables patch screenshot](./dist/images/readme/cables.jpg)
 
 [Link to the original patch](https://cables.gl/p/55Ipxg). Note: scrolling won't work right now unless it's embedded in a webpage. Right-click to reset initial animation.
