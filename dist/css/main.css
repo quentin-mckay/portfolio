@@ -658,6 +658,7 @@ nav li:nth-child(4) {
 .blog-single {
   margin: 5rem auto;
   width: 80%;
+  font-family: "Calibre", sans-serif;
 }
 .blog-single .main-picture {
   height: 40vh;
