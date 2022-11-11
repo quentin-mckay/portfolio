@@ -411,6 +411,10 @@
 @media only screen and (max-width: $mobile-width) {
     .home {
 
+        .section-heading {
+            font-size: 1.2rem;
+        }
+
         .about {
             &__content {
                 // grid-template-columns: 1fr;
@@ -433,8 +437,13 @@
             grid-template-columns: 1fr; // stack on top of each other
         }
 
+        .project-title {
+            font-size: 1rem;
+        }
+
         .side-project-info, .side-project-info-flipped {
-            height: 25vh; // spread it out a bit
+            // height: 25vh; // spread it out a bit
+            // padding: 5px;
         }
     
         .side-project-info-flipped {
@@ -446,6 +455,8 @@
 
         .project-details {
             width: 100%; // no overlap into picture needed
+            // padding: 10px;
+            padding: 5px;
         }
 
 
@@ -455,6 +466,10 @@
                 // background: teal;
                 margin: 0;
 
+                input, textarea {
+                    padding: 5px;
+                    padding-left: 10px;
+                }
             }
         }
 

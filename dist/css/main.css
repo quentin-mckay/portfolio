@@ -437,6 +437,9 @@ nav li:nth-child(4) {
 }
 
 @media only screen and (max-width: 800px) {
+  .home .section-heading {
+    font-size: 1.2rem;
+  }
   .home .about__content {
     display: block;
   }
@@ -450,17 +453,22 @@ nav li:nth-child(4) {
   .home .featured-project {
     grid-template-columns: 1fr;
   }
-  .home .side-project-info, .home .side-project-info-flipped {
-    height: 25vh;
+  .home .project-title {
+    font-size: 1rem;
   }
   .home .side-project-info-flipped {
     order: 1;
   }
   .home .project-details {
     width: 100%;
+    padding: 5px;
   }
   .home .contact form {
     margin: 0;
+  }
+  .home .contact form input, .home .contact form textarea {
+    padding: 5px;
+    padding-left: 10px;
   }
 }
 .projects .project {
