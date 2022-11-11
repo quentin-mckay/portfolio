@@ -9,6 +9,14 @@ const blurLayer = document.querySelector('.blur-layer')
 
 const main = document.querySelector('main')
 
+
+
+// const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+// const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
+
+
+
 // window.pageYOffset starts at 0 and increases as you scroll down
 let prevScrollPos = window.pageYOffset
 
@@ -112,3 +120,21 @@ document.addEventListener('CABLES.jsLoaded', function (event) {
         "canvas":{"alpha":true,"premultipliedAlpha":true} // make canvas transparent
     });
 });
+
+
+
+// horrible hacky fix here. to be fixed later
+// cables embedded patch is messing with the mobile view body width
+// so I'm overriding it until I figure out the issue.
+let width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+console.log('width: ', width)
+document.body.style.width = `${width}px`
+
+
+window.addEventListener('resize', () => {
+    
+    let width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    console.log('width: ', width)
+    
+    document.body.style.width = `${width}px`
+})

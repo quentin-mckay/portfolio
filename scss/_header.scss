@@ -67,6 +67,8 @@ header {
 
         a {
             padding: 1rem;
+            
+
             transition: color 0.3s;
     
             &:hover {
@@ -152,12 +154,15 @@ header {
 }
 
 
-
+.active {
+    // border-bottom: 1px solid $green-color;
+    // color: $green-color;
+}
 
 // ====== Mobile: screen size less than ======
 @media only screen and (max-width: $mobile-width) {
     body {
-        background: slateblue;
+        // background: slateblue;
     }
 
     .menu-btn-burger {

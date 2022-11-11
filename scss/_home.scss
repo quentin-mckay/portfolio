@@ -288,7 +288,29 @@
     }
 
 
+    .project-link-wrapper {
+        text-align: center;
+    }
 
+    .projects-link {
+        display: inline-block;
+
+        font-size: 1.2rem;
+
+        border: 1px solid $red-color;
+        color: $red-color;
+
+        padding: 10px 20px;
+        padding-bottom: 6px;
+
+        border-radius: 3px;
+
+        // transition: all 0.2s;
+
+        &:hover {
+            background: rgba($red-color, 0.05);
+        }
+    }
 
 
     // =====================================
@@ -309,6 +331,8 @@
 
             input, textarea{
                 display: block;
+                width: 100%; // otherwise they grow too wide
+
                 background: #333;
                 color: $medium-text-color;
 
@@ -425,7 +449,14 @@
         }
 
 
-        
+        .contact {
+            
+            form {
+                // background: teal;
+                margin: 0;
+
+            }
+        }
 
 
         
