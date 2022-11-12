@@ -206,9 +206,9 @@ projects.forEach(project => {
 
 Used realtime visual patching environment [cables.gl](https://cables.gl/home)
 
-String texture is randomly sampled to create an array of points.  
+Text texture is randomly sampled to create an array of points.  
 
-Animation on page load drives interpolation between that array and another array of random 3d points (which has a sine function with modulating phase applied). 
+Animation on page load drives interpolation between that array and 2nd array of random 3D points (which has a sine function with modulating phase applied). 
 
 `window.pageYOffset` is then used to transform the viewmatrix in Y axis and drive interpolation to a 3rd array of random points (to spread them back out)
 
@@ -217,3 +217,7 @@ Point opacity is controlled by sampling a perlin noise texture (for the sparkle 
 ![cables patch screenshot](./dist/images/readme/cables.jpg)
 
 [Link to the original patch](https://cables.gl/p/55Ipxg). Note: scrolling won't work right now unless it's embedded in a webpage. Right-click to reset initial animation.
+
+#### Issues
+1. Scrolling with a trackpad seems to freeze the animation until released. Not sure why.
+2. Performs very poorly on less powerful machines and I haven't implemented any accomodation or fallback for that scenario.

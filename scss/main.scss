@@ -4,7 +4,7 @@
 // but I haven't looked into it yet
 
 @import 'config';
-@import url(/dist/font/stylesheet.css); // bring in downloaded
+@import url(../dist/font/stylesheet.css); // bring in downloaded
 @import 'header';
 @import 'home';
 @import 'projects';
@@ -234,9 +234,4 @@ canvas {
 
 
     }
-}
-
-
-.cables-loaded {
-    // width: 360px;
 }

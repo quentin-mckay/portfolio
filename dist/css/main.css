@@ -1,4 +1,4 @@
-@import url(/dist/font/stylesheet.css);
+@import url(../dist/font/stylesheet.css);
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 .fade-in-scroll {
   -webkit-animation: fade-in 1s forwards;
@@ -52,7 +52,7 @@ header {
   transition: transform 0.25s;
 }
 header .logo {
-  font-family: "neurial_groteskregular";
+  font-family: "neurial_groteskregular", sans-serif;
   font-weight: bold;
   font-size: 2rem;
   z-index: 3;
@@ -476,6 +476,9 @@ nav li:nth-child(4) {
     padding-left: 10px;
   }
 }
+.projects {
+  font-family: Calibre, sans-serif;
+}
 .projects .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -500,6 +503,7 @@ nav li:nth-child(4) {
 .projects .project-title {
   color: #ddd;
   font-size: 1.6rem;
+  margin-top: 0;
 }
 .projects .project-details {
   background: #222;

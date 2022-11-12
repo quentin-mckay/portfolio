@@ -1,5 +1,5 @@
 .projects {
-
+    font-family: Calibre, sans-serif;
 
     .project {
         display: grid;
@@ -48,6 +48,7 @@
     .project-title {
         color: $light-text-color;
         font-size: 1.6rem;
+        margin-top: 0;
     }
 
     .project-details {
