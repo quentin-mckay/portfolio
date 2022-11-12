@@ -20,7 +20,7 @@
         font-size: 1.2rem;
         padding-left: 4px;
 
-        border-left: 1px solid $border-color;
+        // border-left: 1px solid $border-color;
         border-top: 1px solid $border-color;
         align-self: flex-start;
 
@@ -69,7 +69,7 @@
 
         align-self: flex-end;
 
-        border-right: 1px solid $border-color;
+        // border-right: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
 
         @include fade-in-delay($delay-undername);

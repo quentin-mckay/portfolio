@@ -199,14 +199,13 @@ nav li:nth-child(4) {
   color: #08fdd8;
   font-size: 1.2rem;
   padding-left: 4px;
-  border-left: 1px solid #999;
   border-top: 1px solid #999;
   align-self: flex-start;
   opacity: 0;
   -webkit-animation: fade-in-homepage 2s forwards;
           animation: fade-in-homepage 2s forwards;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 .home .name {
   visibility: hidden;
@@ -224,13 +223,12 @@ nav li:nth-child(4) {
   margin-top: 4rem;
   padding-right: 3px;
   align-self: flex-end;
-  border-right: 1px solid #999;
   border-bottom: 1px solid #999;
   opacity: 0;
   -webkit-animation: fade-in-homepage 2s forwards;
           animation: fade-in-homepage 2s forwards;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 .home .section-heading {
   padding: 1rem 0;
@@ -748,6 +746,7 @@ a {
 
 canvas {
   position: fixed;
+  transform: translateY(-5px);
   z-index: -1;
   opacity: 0;
   -webkit-animation: fade-in-homepage 2s forwards;
