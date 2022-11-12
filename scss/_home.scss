@@ -295,7 +295,7 @@
     .projects-link {
         display: inline-block;
 
-        font-size: 1.2rem;
+        font-size: 1.4rem;
 
         border: 1px solid $red-color;
         color: $red-color;
@@ -305,7 +305,7 @@
 
         border-radius: 3px;
 
-        // transition: all 0.2s;
+        transition: all 0.1s;
 
         &:hover {
             background: rgba($red-color, 0.05);
@@ -318,7 +318,10 @@
     // =====================================
 
     .contact {
-        margin: 8rem 0;
+        margin-top: 12rem;
+        margin-bottom: 8rem;
+
+        opacity: 0; // to fade in on scroll
 
         form {
             margin: 0 3rem;
@@ -459,6 +462,10 @@
             padding: 5px;
         }
 
+
+        .projects-link {
+            font-size: 1.2rem;
+        }
 
         .contact {
             

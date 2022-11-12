@@ -83,8 +83,8 @@ header nav {
   opacity: 0;
   -webkit-animation: fade-in-homepage 2s forwards;
           animation: fade-in-homepage 2s forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 header nav a {
   padding: 1rem;
@@ -132,8 +132,8 @@ nav li:nth-child(4) {
   opacity: 0;
   -webkit-animation: fade-in-homepage 2s forwards;
           animation: fade-in-homepage 2s forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .menu-btn-x {
@@ -160,7 +160,7 @@ nav li:nth-child(4) {
     position: fixed;
     top: 0;
     right: 0;
-    width: 30%;
+    width: 35%;
     left: 100%;
     border-radius: 0 0 0 4px;
   }
@@ -168,11 +168,11 @@ nav li:nth-child(4) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 5px;
     margin-top: 5rem;
   }
   nav li {
-    background: rgba(8, 253, 216, 0.02);
+    background: rgba(8, 253, 216, 0.2);
     padding: 2rem;
     border: 1px solid #08fdd8;
     border-right: none;
@@ -204,8 +204,8 @@ nav li:nth-child(4) {
   opacity: 0;
   -webkit-animation: fade-in-homepage 2s forwards;
           animation: fade-in-homepage 2s forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 .home .name {
   visibility: hidden;
@@ -228,8 +228,8 @@ nav li:nth-child(4) {
   opacity: 0;
   -webkit-animation: fade-in-homepage 2s forwards;
           animation: fade-in-homepage 2s forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 .home .section-heading {
   padding: 1rem 0;
@@ -304,7 +304,7 @@ nav li:nth-child(4) {
   width: 100%;
   border-radius: 8px;
 }
-.home .side-project-info {
+.home .side-project-info, .home .projects .side-project-info-flipped, .projects .home .side-project-info-flipped {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -372,18 +372,21 @@ nav li:nth-child(4) {
 }
 .home .projects-link {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: 1px solid #FD2155;
   color: #FD2155;
   padding: 10px 20px;
   padding-bottom: 6px;
   border-radius: 3px;
+  transition: all 0.1s;
 }
 .home .projects-link:hover {
   background: rgba(253, 33, 85, 0.05);
 }
 .home .contact {
-  margin: 8rem 0;
+  margin-top: 12rem;
+  margin-bottom: 8rem;
+  opacity: 0;
 }
 .home .contact form {
   margin: 0 3rem;
@@ -463,6 +466,9 @@ nav li:nth-child(4) {
     width: 100%;
     padding: 5px;
   }
+  .home .projects-link {
+    font-size: 1.2rem;
+  }
   .home .contact form {
     margin: 0;
   }
@@ -474,12 +480,13 @@ nav li:nth-child(4) {
 .projects .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  opacity: 0;
 }
 .projects img {
   width: 100%;
   border-radius: 8px;
 }
-.projects .side-project-info {
+.projects .side-project-info, .projects .side-project-info-flipped {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -488,11 +495,7 @@ nav li:nth-child(4) {
   text-align: right;
 }
 .projects .side-project-info-flipped {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: flex-start;
-  color: #999;
   text-align: left;
 }
 .projects .project-title {
@@ -553,9 +556,6 @@ nav li:nth-child(4) {
 @media only screen and (max-width: 800px) {
   .projects .project {
     grid-template-columns: 1fr;
-  }
-  .projects .side-project-info, .projects .side-project-info-flipped {
-    height: 25vh;
   }
   .projects .side-project-info-flipped {
     order: 1;
