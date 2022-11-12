@@ -483,6 +483,7 @@ nav li:nth-child(4) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   opacity: 0;
+  font-family: Calibre, sans-serif;
 }
 .projects img {
   width: 100%;
