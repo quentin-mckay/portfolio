@@ -1,5 +1,5 @@
 .projects {
-    font-family: Calibre, sans-serif;
+    // font-family: Nunito, sans-serif;
 
     .project {
         display: grid;
@@ -7,13 +7,18 @@
 
         opacity: 0;  // to fade in on scroll
 
+        
         font-family: Calibre, sans-serif;
+        font-family: Nunito, sans-serif;
         // gap: 10px;
         // margin-bottom: 6rem;
 
         // min-height: 200px;
 
         // opacity: 0; // prepare for scroll fade
+
+        // padding-right: 10px;
+        // border-right: 1px solid rgba($red-color, 0.5);
     }
 
     img {
@@ -37,6 +42,12 @@
         }
     }
 
+    .side-image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     // .side-project-info-flipped {
     //     display: flex;
     //     flex-direction: column;
@@ -54,7 +65,7 @@
     }
 
     .project-details {
-        background: #222;
+        background: rgb(42, 42, 42);
         border-radius: $border-radius;
         padding: 20px;
 

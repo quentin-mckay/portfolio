@@ -476,14 +476,12 @@ nav li:nth-child(4) {
     padding-left: 10px;
   }
 }
-.projects {
-  font-family: Calibre, sans-serif;
-}
 .projects .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
   opacity: 0;
   font-family: Calibre, sans-serif;
+  font-family: Nunito, sans-serif;
 }
 .projects img {
   width: 100%;
@@ -501,13 +499,18 @@ nav li:nth-child(4) {
   align-items: flex-start;
   text-align: left;
 }
+.projects .side-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .projects .project-title {
   color: #ddd;
   font-size: 1.6rem;
   margin-top: 0;
 }
 .projects .project-details {
-  background: #222;
+  background: rgb(42, 42, 42);
   border-radius: 8px;
   padding: 20px;
   width: 110%;
@@ -572,7 +575,7 @@ nav li:nth-child(4) {
   width: 80%;
   max-width: 800px;
   margin: 8rem auto;
-  font-family: Calibre;
+  font-family: Calibre, sans-serif;
   font-size: 1.2rem;
   color: #ddd;
 }
