@@ -43,7 +43,13 @@
     }
     
     img {
-        width: 100%;
+        width: 70%;
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    a {
+        color: $green-color;
     }
 
     .subtitle {
@@ -65,6 +71,9 @@
     /*     border: 1px solid #ccc; */
         
     /*     text-align: center; */
+
+        display: flex;
+        flex-direction: column;
     }
     
     iframe {
