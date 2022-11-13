@@ -4,7 +4,8 @@
 // but I haven't looked into it yet
 
 @import 'config';
-@import url(../dist/font/stylesheet.css); // bring in downloaded
+@import url(../dist/font/stylesheet.css); // bring in downloaded font
+@import url(https://fonts.cdnfonts.com/css/calibre);  
 @import 'header';
 @import 'home';
 @import 'projects';
