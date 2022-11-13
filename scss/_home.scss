@@ -87,6 +87,8 @@
         
         opacity: 0; // prepare for scroll fade in
 
+        font-weight: 400;
+
 
         &::after {
             content: "";
@@ -104,6 +106,8 @@
     h3 {
         font-size: 1.6rem;
         color: $light-text-color;
+
+        font-weight: 400;
     }
 
 
@@ -133,7 +137,7 @@
             }
 
             &.web-tech {
-                color: $green-color;
+                color: $red-color;
             }
         }
 
@@ -186,6 +190,8 @@
         padding-top: 6rem;
         // background: midnightblue;
         opacity: 1; // for nothing, just to stop scss watcher from complaining
+
+        font-size: 1.2rem;
     }
 
     .featured-project {

@@ -1,4 +1,5 @@
 @import url(../dist/font/stylesheet.css);
+@import url(https://fonts.cdnfonts.com/css/calibre);
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 .fade-in-scroll {
   -webkit-animation: fade-in 1s forwards;
@@ -237,6 +238,7 @@ nav li:nth-child(4) {
   margin: 2rem 0;
   font-size: 3rem;
   opacity: 0;
+  font-weight: 400;
 }
 .home .section-heading::after {
   content: "";
@@ -249,6 +251,7 @@ nav li:nth-child(4) {
 .home h3 {
   font-size: 1.6rem;
   color: #ddd;
+  font-weight: 400;
 }
 .home .about p {
   color: #999;
@@ -264,7 +267,7 @@ nav li:nth-child(4) {
   padding: 0;
 }
 .home .about span.web-tech {
-  color: #08fdd8;
+  color: #FD2155;
 }
 .home .about__content {
   display: grid;
@@ -291,6 +294,7 @@ nav li:nth-child(4) {
 .home .featured-projects {
   padding-top: 6rem;
   opacity: 1;
+  font-size: 1.2rem;
 }
 .home .featured-project {
   display: grid;
@@ -481,7 +485,6 @@ nav li:nth-child(4) {
   grid-template-columns: 1fr 1fr;
   opacity: 0;
   font-family: Calibre, sans-serif;
-  font-family: Nunito, sans-serif;
 }
 .projects img {
   width: 100%;
