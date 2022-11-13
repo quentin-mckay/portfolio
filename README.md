@@ -219,5 +219,5 @@ Point opacity is controlled by sampling a perlin noise texture (for the sparkle 
 [Link to the original patch](https://cables.gl/p/55Ipxg). Note: scrolling won't work right now unless it's embedded in a webpage. Right-click to reset initial animation.
 
 #### Issues
-1. Scrolling with a trackpad seems to freeze the animation until released. Not sure why.
-2. Performs very poorly on less powerful machines and I haven't implemented any accomodation or fallback for that scenario.
+1. Scrolling with a trackpad seems to freeze the point cloud animation until released. Not sure why.
+2. Performs poorly on less powerful machines. I've implemented a fallback until it can be further optimized. Pressing `t` will toggle the `<canvas>` on/off and replace it with a normal `<h1>` tag.
