@@ -1,6 +1,6 @@
 # Quentin McKay Portfolio Website
 
-[Click to view published portfolio website](https://quentin-mckay-portfolio.netlify.app/)
+[Click to view published portfolio website](https://quentin-mckay.netlify.app/)
 
 [Click to view GitHub repository](https://github.com/quentin-mckay/portfolio)
 
