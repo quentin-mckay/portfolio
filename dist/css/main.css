@@ -138,6 +138,17 @@ nav li:nth-child(4) {
           animation-delay: 0.5s;
 }
 
+.menu-btn-show {
+  display: block;
+  -webkit-animation: none;
+          animation: none;
+  opacity: 1;
+}
+
+.menu-btn-hide {
+  display: none;
+}
+
 .menu-btn-x {
   display: none;
   width: 1.8rem;
@@ -146,7 +157,7 @@ nav li:nth-child(4) {
   top: 0;
   right: 0;
   width: 40px;
-  margin: 0.8rem 2.6rem;
+  margin: 0.8rem 2.2rem;
 }
 
 .menu-btn-x-show {
@@ -184,6 +195,12 @@ nav li:nth-child(4) {
     color: white;
   }
 }
+@media only screen and (min-width: 800px) {
+  .menu-btn-burger {
+    display: none !important;
+    background: pink;
+  }
+}
 .home {
   width: 80%;
   max-width: 800px;
@@ -212,10 +229,13 @@ nav li:nth-child(4) {
   visibility: hidden;
   font-size: clamp(20px, 8vw, 80px);
   font-family: Calibre, sans-serif;
-  font-weight: 500;
+  font-weight: 200;
   align-self: center;
   position: relative;
   margin-top: 2.6rem;
+}
+.home .show-name {
+  visibility: visible;
 }
 .home .under-name {
   color: #FD2155;
@@ -444,7 +464,7 @@ nav li:nth-child(4) {
 
 @media only screen and (max-width: 800px) {
   .home .section-heading {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   .home .about__content {
     display: block;
@@ -460,14 +480,14 @@ nav li:nth-child(4) {
     grid-template-columns: 1fr;
   }
   .home .project-title {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
   .home .side-project-info-flipped {
     order: 1;
   }
   .home .project-details {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
   }
   .home .projects-link {
     font-size: 1.2rem;
@@ -767,6 +787,10 @@ canvas {
           animation-duration: 10s;
 }
 
+.hide-canvas {
+  display: none;
+}
+
 .blur-layer {
   position: fixed;
   top: 0;
@@ -776,9 +800,9 @@ canvas {
   transform: all 0.25s;
   pointer-events: none;
   z-index: 99;
-  transition: -webkit-backdrop-filter 0.8s;
-  transition: backdrop-filter 0.8s;
-  transition: backdrop-filter 0.8s, -webkit-backdrop-filter 0.8s;
+  transition: -webkit-backdrop-filter 0.5s;
+  transition: backdrop-filter 0.5s;
+  transition: backdrop-filter 0.5s, -webkit-backdrop-filter 0.5s;
   -webkit-backdrop-filter: blur(4px) opacity(0);
           backdrop-filter: blur(4px) opacity(0);
 }

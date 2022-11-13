@@ -28,12 +28,14 @@
     }
 
     .name {
+        // keep there for spacing
         visibility: hidden;
+
         // fluid size scales with window width but stays within 20-80px
         font-size: clamp(20px, 8vw, 80px);
 
         font-family: Calibre, sans-serif;
-        font-weight: 500;
+        font-weight: 200;
         // font-weight: light;
 
         align-self: center;
@@ -58,6 +60,10 @@
         //     color: $red-color;
         //     z-index: -2;
         // }
+    }
+
+    .show-name {
+        visibility: visible;
     }
 
     .under-name {
@@ -421,7 +427,7 @@
     .home {
 
         .section-heading {
-            font-size: 1.2rem;
+            font-size: 2rem;
         }
 
         .about {
@@ -447,7 +453,7 @@
         }
 
         .project-title {
-            font-size: 1rem;
+            font-size: 1.6rem;
         }
 
         .side-project-info, .side-project-info-flipped {
@@ -465,7 +471,7 @@
         .project-details {
             width: 100%; // no overlap into picture needed
             // padding: 10px;
-            padding: 5px;
+            padding: 10px;
         }
 
 

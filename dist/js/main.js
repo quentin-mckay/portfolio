@@ -21,7 +21,6 @@ const main = document.querySelector('main')
 let prevScrollPos = window.pageYOffset
 
 window.addEventListener('scroll', () => {
-
     const currentScrollPos = window.pageYOffset
     
     // if scrolling down
@@ -45,11 +44,12 @@ window.addEventListener('scroll', () => {
 
 // on mobile menu open
 menuButtonBurger.addEventListener('click', () => {
-    console.log('open button clicked');
+    // console.log('open button clicked');
 
     nav.classList.add('open-nav') // adds class which transform: translate(0) to show mobile menu
 
-    // menuButtonBurger.style.display = "none"
+    menuButtonBurger.style.display = "none"
+    // menuButtonBurger.classList.add('menu-btn-hide')
     menuButtonX.style.display = "block" // show the X button
 
     document.body.classList.add('disable-scroll') // disable scrolling
@@ -71,7 +71,13 @@ main.addEventListener('click', closeMenu)
 function closeMenu() {
     nav.classList.remove('open-nav')
     menuButtonX.style.display = "none"
-    // menuButtonBurger.style.display = "block"
+
+    menuButtonBurger.style.display = "block"
+    menuButtonBurger.style.opacity = 1;
+    menuButtonBurger.style.animation = "none";
+    // menuButtonBurger.classList.add('menu-btn-show')
+    console.log('show menu btn')
+
     document.body.classList.remove('disable-scroll') // enable scrolling
     blurLayer.classList.remove('blur') // remove blur
 }
@@ -140,4 +146,23 @@ window.addEventListener('resize', () => {
     // console.log('width: ', width)
     
     document.body.style.width = `${width}px`
+
+    // if (width > 800) {
+    //     menuButtonBurger.classList.add('menu-btn-hide')
+    //     console.log('hiding')
+    // }
+    // else {
+    //     menuButtonBurger.classList.add('menu-btn-show')
+    // }
+})
+
+let canvas = document.querySelector('canvas')
+let name = document.querySelector('.home .name')
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 't') {
+        console.log('t pressed')
+        canvas.classList.toggle('hide-canvas')
+        name.classList.toggle('show-name')
+    }
 })

@@ -87,6 +87,10 @@ canvas {
     animation-duration: 10s; // override mixin above used for everything else
 }
 
+.hide-canvas {
+    display: none;
+}
+
 
 
 .blur-layer {
@@ -102,7 +106,7 @@ canvas {
     z-index: 99;  // just under the header
 
     // fade opacity of blur layer to simulate animation of blur effect
-    transition: backdrop-filter 0.8s;
+    transition: backdrop-filter 0.5s;
     backdrop-filter: blur(4px) opacity(0);
 }
 

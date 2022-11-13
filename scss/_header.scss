@@ -120,6 +120,16 @@ header {
     @include fade-in-delay($delay-hamburger);
 }
 
+.menu-btn-show {
+    display: block;
+    animation: none;
+    opacity: 1;
+}
+
+.menu-btn-hide {
+    display: none;
+}
+
 .menu-btn-x {
     display: none;
     width: 1.8rem;
@@ -129,9 +139,11 @@ header {
     top: 0;
     right: 0;
     width: 40px;
-    margin: 0.8rem 2.6rem; // positioning the svg. yuck
+    margin: 0.8rem 2.2rem; // positioning the svg. yuck
     // z-index: 2;
 }
+
+
 
 
 // ====== State change classes applied via Javascript ======
@@ -168,6 +180,10 @@ header {
 
     .menu-btn-burger {
         display: block;  // show on mobile
+
+        // no animation for hamburger icon
+        // animation: none;
+        // opacity: 1;
     }
 
     // mobile nav
@@ -213,9 +229,9 @@ header {
     }
 }
 
-// @media only screen and (min-width: $mobile-width) {
-//     .menu-btn-burger {
-//         display: none;
-//         background: pink;
-//     }
-// }
+@media only screen and (min-width: $mobile-width) {
+    .menu-btn-burger {
+        display: none !important; // look away. bad practice I know
+        background: pink;
+    }
+}
