@@ -4,13 +4,13 @@
 .projects {
     // font-family: Nunito, sans-serif;
 
+    // woops, I think I should have been doing this all along to avoid namespace conflicts
     .project {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
         opacity: 0;  // to fade in on scroll
 
-        
         font-family: Calibre, sans-serif;
         // font-family: Nunito, sans-serif;
         // gap: 10px;
@@ -67,6 +67,7 @@
         color: $light-text-color;
         font-size: 1.6rem;
         margin-top: 0;
+        font-weight: 300;
     }
 
     .project-details {
@@ -189,6 +190,15 @@
     .projects {
         .project {
             grid-template-columns: 1fr; // stack on top of each other
+        }
+
+        & .project {
+            margin: 4rem auto;
+        }
+
+        & .project-title {
+            font-size: 1.4rem;
+            margin: 0;
         }
 
         .side-project-info, .side-project-info-flipped {

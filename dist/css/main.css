@@ -556,6 +556,7 @@ nav li:nth-child(4) {
   color: #ddd;
   font-size: 1.6rem;
   margin-top: 0;
+  font-weight: 300;
 }
 .projects .project-details {
   background: rgb(42, 42, 42);
@@ -639,6 +640,13 @@ nav li:nth-child(4) {
 @media only screen and (max-width: 800px) {
   .projects .project {
     grid-template-columns: 1fr;
+  }
+  .projects .project {
+    margin: 4rem auto;
+  }
+  .projects .project-title {
+    font-size: 1.4rem;
+    margin: 0;
   }
   .projects .side-project-info-flipped {
     order: 1;
