@@ -101,8 +101,9 @@ $delay-canvas: 0s;
 
 // === z-index reference ===
 
-// 1 canvas
+// -1 canvas
 // 0 body
-// 10 home page icons and email 
-// 99 blur-layer
+// 1 project details
+// 10 side icons and email 
+// 99 blur-layer (pointer-events: none)
 // 100 header
