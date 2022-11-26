@@ -208,6 +208,7 @@ nav li:nth-child(4) {
 }
 .home .hero {
   height: 100vh;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
