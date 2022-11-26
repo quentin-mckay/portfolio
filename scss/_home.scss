@@ -6,7 +6,10 @@
 
 
     .hero {
-        height: 100vh;
+        // height: 100vh;
+        min-height: 100vh;
+        // min-height: -webkit-fill-available;
+
         border: 1px solid red;
     
         display: flex;
@@ -466,7 +469,7 @@
 // ====== Mobile ======
 @media only screen and (max-width: $mobile-width) {
     .home {
-        transform: translateY(-4vh);
+        // transform: translateY(-4vh);
 
         .under-name {
             margin-top: 0;
