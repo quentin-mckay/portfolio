@@ -187,46 +187,50 @@ header {
     }
 
     // mobile nav
-    nav {
-        background: $mobile-menu-bg;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 35%;
-        // height: 100vh;
 
-        left: 100%; // snap it off to the right side of the page by default
-        // transform: translateX(100%);
-
-        border-radius: 0 0 0 4px; // bottom left corner
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            // align-items: center; // horizontal centering
-            justify-content: flex-start; // stay at top
-            // height: 100%;
-            gap: 5px;
-
-            margin-top: 5rem;
+    header {
+        nav {
+            background: $mobile-menu-bg;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 35%;
+            // height: 100vh;
+    
+            left: 100%; // snap it off to the right side of the page by default
+            // transform: translateX(100%);
+    
+            border-radius: 0 0 0 4px; // bottom left corner
+    
+            ul {
+                display: flex;
+                flex-direction: column;
+                // align-items: center; // horizontal centering
+                justify-content: flex-start; // stay at top
+                // height: 100%;
+                gap: 5px;
+    
+                margin-top: 5rem;
+            }
+    
+            // padding needs to be on li's, NOT a's
+            li {
+                background: rgba($green-color, 0.2);
+                padding: 2rem;
+                padding-right: 7rem;
+                border: 1px solid $green-color;
+                border-right: none;
+                border-radius: $mobile-menu-border-radius 0 0 $mobile-menu-border-radius;
+            }
+            
+            a {
+                color: white;
+                // background: #222;
+                padding: 0;
+            }
         }
-
-        // padding needs to be on li's, NOT a's
-        li {
-            background: rgba($green-color, 0.2);
-            padding: 2rem;
-            border: 1px solid $green-color;
-            border-right: none;
-            border-radius: $mobile-menu-border-radius 0 0 $mobile-menu-border-radius;
-        }
-        
-        a {
-            color: white;
-            // background: #222;
-        }
-
-
     }
+    
 }
 
 @media only screen and (min-width: $mobile-width) {
@@ -234,4 +238,5 @@ header {
         display: none !important; // look away. bad practice I know
         background: pink;
     }
+
 }

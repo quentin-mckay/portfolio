@@ -168,7 +168,7 @@ nav li:nth-child(4) {
   .menu-btn-burger {
     display: block;
   }
-  nav {
+  header nav {
     background: #555;
     position: fixed;
     top: 0;
@@ -177,22 +177,24 @@ nav li:nth-child(4) {
     left: 100%;
     border-radius: 0 0 0 4px;
   }
-  nav ul {
+  header nav ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 5px;
     margin-top: 5rem;
   }
-  nav li {
+  header nav li {
     background: rgba(8, 253, 216, 0.2);
     padding: 2rem;
+    padding-right: 7rem;
     border: 1px solid #08fdd8;
     border-right: none;
     border-radius: 4px 0 0 4px;
   }
-  nav a {
+  header nav a {
     color: white;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -208,7 +210,6 @@ nav li:nth-child(4) {
 }
 .home .hero {
   min-height: 100vh;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
