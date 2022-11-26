@@ -70,7 +70,7 @@
         color: $red-color;
         font-family: 'Fira Code', monospace;
         font-size: 1.3rem;
-        margin-top: 1rem;
+        margin-top: 4rem;
         padding-right: 3px;
 
         align-self: flex-end;
@@ -466,6 +466,11 @@
 // ====== Mobile ======
 @media only screen and (max-width: $mobile-width) {
     .home {
+        transform: translateY(-3vh);
+
+        .under-name {
+            margin-top: 0;
+        }
 
         .section-heading {
             font-size: 2rem;
