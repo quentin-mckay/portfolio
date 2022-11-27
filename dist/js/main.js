@@ -116,6 +116,17 @@ function patchFinishedLoading(patch) {
     // The patch is ready now, all assets have been loaded
 }
 
+
+// ===================================================
+// horrible hacky fix here. to be fixed later
+// cables embedded patch is messing with the mobile view body width
+// so I'm overriding it until I figure out the issue.
+let width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+console.log('width: ', width)
+document.body.style.width = `${width}px`
+
+
+
 document.addEventListener('CABLES.jsLoaded', function (event) {
     CABLES.patch = new CABLES.Patch({
         patch: CABLES.exportedPatch,
@@ -131,13 +142,7 @@ document.addEventListener('CABLES.jsLoaded', function (event) {
 });
 
 
-// ===================================================
-// horrible hacky fix here. to be fixed later
-// cables embedded patch is messing with the mobile view body width
-// so I'm overriding it until I figure out the issue.
-let width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-console.log('width: ', width)
-document.body.style.width = `${width}px`
+
 
 
 window.addEventListener('resize', () => {
